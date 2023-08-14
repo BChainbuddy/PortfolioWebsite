@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "description": "This is my portfolio",
-  "homepage": "https://BChainbuddy.github.io/PortfolioWebsite/index.js",
+  "homepage": "https://BChainbuddy.github.io/PortfolioWebsite",
   "main": "index.js",
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
