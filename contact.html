@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/dist/output.css" rel="stylesheet">
+    </head>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <body class="h-screen">
+        <div class="flex flex-row justify-between">
+            <div class="flex lg:ml-20 md:ml-8 sm:ml-2">
+                <img src="Img/ethereum-eth-logo.png" class="h-20 w-20 mt-9">
+                <p class="text-3xl mt-16 font-thin font-mono text-transparent bg-clip-text custom-gradient-left">JAKA</p>
+            </div>
+            <div class="lg:flex justify-end md:hidden sm:hidden">
+                <div class="space-x-10 mt-16 ml-auto mr-36 text-xl">
+                    <a href="index.html" class="text-LightBlue hover:text-white">Home</a>
+                    <a href="mywork.html" class="text-LightBlue hover:text-white">My work</a>
+                    <a href="skills.html" class="text-LightBlue hover:text-white">Skills</a>
+                    <a href="aboutme.html" class="text-LightBlue hover:text-white">About me</a>
+                    <a href="contact.html" class="text-white font-bold">Contact</a>
+                </div>
+            </div>
+            <button id="menu-btn" class="block hamburger tems-center mt-16 mr-16 lg:hidden focus:outline-none">
+                <span class="hamburger-top bg-LightBlue"></span>
+                <span class="hamburger-middle bg-LightBlue"></span>
+                <span class="hamburger-bottom bg-LightBlue"></span>
+            </button>
+        </div>
+        <div class="lg:hidden">
+            <div id="menu" class="z-20 absolute flex-col items-center backdrop-blur-xl hidden self-end left-6 right-6 py-8 mt-6 space-y-6 font-bold text-DarkBlue bg-LightBlue sm:w-auto sm:self-center drop-shadow-md">
+                <a href="index.html" class="hover:text-white text-lg">Home</a>
+                <a href="mywork.html" class="hover:text-white text-lg">My work</a>
+                <a href="skills.html" class="hover:text-white text-lg">Skills</a>
+                <a href="aboutme.html" class="hover:text-white text-lg">About me</a>
+                <a href="contact.html" class="text-white text-lg font-bold">Contact</a>
+            </div>
+        </div>
+        <div class="flex flex-row p-40 justify-center lg:space-x-28">
+            <div class="space-y-10">
+                <div>
+                    <h1 class="text-end lg:text-end md:text-center sm:text-center lg:mr-12 text-4xl text-LightBlue font-mono">CONTACT ME</h1>
+                </div>
+                <div class="space-y-8">
+                    <div class="flex flex-row items-center space-x-4">
+                        <img src="Img/gmail-icon-509x512-ikquhn8l.png" class="w-16 h-16">
+                        <a href="mailto:jakapotokar50@gmail.com"><p class="text-2xl text-white">jaka.potokar50@gmail.com</p></a>
+                    </div>
+                    <div class="flex flex-row items-center space-x-4">
+                        <img src="Img/linkedin-icon-1024x1024-z5dvl47c.png" class="w-16 h-16">
+                        <a href="https://www.linkedin.com/in/jaka-potokar-14452627b/"><p class="text-2xl text-white">Jaka Potokar</p></a>
+                    </div>
+                    <div class="flex flex-row items-center space-x-4">
+                        <img src="Img/githubLogoForBackground.jpg" class="w-16 h-16">               
+                        <a href="https://github.com/BChainbuddy?tab=repositories"><p class="text-2xl text-white">BChainBuddy</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8">
+                <img src="Img/contactmeimg5.png" class="w-80 h-80 lg:flex md:hidden sm:hidden">
+            </div>
+          </div>
+          <script src="js/button.js"></script>
+    </body>
+</html>

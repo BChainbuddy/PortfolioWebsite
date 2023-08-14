@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/dist/output.css" rel="stylesheet">
+    </head>
+    <body class="lg:h-screen">
+        <div class="flex flex-row justify-between">
+            <div class="flex lg:ml-20 md:ml-8 sm:ml-2">
+                <img src="Img/ethereum-eth-logo.png" class="h-20 w-20 mt-9">
+                <p class="text-3xl mt-16 font-thin font-mono text-transparent bg-clip-text custom-gradient-left">JAKA</p>
+            </div>
+            <div class="lg:flex justify-end md:hidden sm:hidden">
+                <div class="space-x-10 mt-16 ml-auto mr-36 text-xl">
+                    <a href="index.html" class="text-LightBlue hover:text-white">Home</a>
+                    <a href="mywork.html" class="text-LightBlue hover:text-white">My work</a>
+                    <a href="skills.html" class="font-bold text-white">Skills</a>
+                    <a href="aboutme.html" class="text-LightBlue hover:text-white">About me</a>
+                    <a href="contact.html" class="text-LightBlue hover:text-white">Contact</a>
+                </div>
+            </div>
+            <button id="menu-btn" class="block hamburger tems-center mt-16 mr-16 lg:hidden focus:outline-none">
+                <span class="hamburger-top bg-LightBlue"></span>
+                <span class="hamburger-middle bg-LightBlue"></span>
+                <span class="hamburger-bottom bg-LightBlue"></span>
+            </button>
+        </div>
+        <div class="lg:hidden">
+            <div id="menu" class="z-20 absolute flex-col items-center backdrop-blur-xl hidden self-end left-6 right-6 py-8 mt-6 space-y-6 font-bold text-DarkBlue bg-LightBlue sm:w-auto sm:self-center drop-shadow-md">
+                <a href="index.html" class="hover:text-white text-lg">Home</a>
+                <a href="mywork.html" class="hover:text-white text-lg">My work</a>
+                <a href="skills.html" class="text-white text-lg font-bold">Skills</a>
+                <a href="aboutme.html" class="hover:text-white text-lg">About me</a>
+                <a href="contact.html" class="hover:text-white text-lg">Contact</a>
+            </div>
+        </div>
+        <div class="flex flex-col lg:space-y-4 sm:space-y-16">
+            <div class="lg:p-8 lg:mt-10 sm:mt-14">
+                <h1 class="text-4xl text-center text-LightBlue font-mono">SKILLS</h1>
+            </div>
+            <div class="flex lg:flex-row sm:space-y-24 md:space-y-40 lg:space-y-0 md:flex-col sm:flex-col sm:justify-center md:justify-center sm:items-center md:items-center">
+                <div class="lg:w-6/12 md:w-10/12 sm:w-full flex justify-center">
+                    <div class="lg:w-6/12 sm:w-9/12 md:w-7/12 space-y-7">
+                    <!-- <div class="w-3/12 space-y-7"> -->
+                        <h2 class="text-3xl text-LightBlue text-center font-mono">FRONTEND</h2>
+                        <div class="grid grid-cols-2 place-items-center gap-10">
+                            <div class="relative group">
+                                <img src="Img/react3.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>REACT</p></div>
+                            </div>
+                            <div class="relative group">
+                                <img src="Img/Tailwindcss.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>TAILWINDCSS</p></div>
+                            </div>
+                            <div class="relative group">
+                                <img src="Img/nextjs.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>NEXTJS</p></div>
+                            </div>
+                            <div class="relative group">
+                                <img src="Img/html5.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>HTML</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="w-5/12 space-y-7"> -->
+                <div class="lg:w-6/12 md:w-10/12 sm:w-full flex justify-center sm:pb-8">
+                    <div class="lg:w-10/12 sm:w-full sm:mx-2 space-y-7">
+                        <h2 class="text-3xl text-LightBlue text-center font-mono">BACKEND</h2>
+                        <!-- <div class="border-2 rounded-2xl border-LightBlue"> -->
+                            <div class="lg:mx-4 grid grid-cols-3 gap-10 place-items-center ">
+                                <div class="col-span-3 place-items-center flex flex-row gap-10">
+                                    <div class="relative group">
+                                        <img src="Img/javascript.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                        <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>JAVASCRIPT</p></div>
+                                    </div>
+                                    <div class="relative group">
+                                        <img src="Img/solidity.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                        <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>SOLIDITY</p></div>
+                                    </div>
+                                </div>
+                                <div class="relative group">
+                                    <img src="Img/python.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                    <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>PYTHON</p></div>
+                                </div>
+                                <div class="relative group">
+                                    <img src="Img/hardhat.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                    <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>HARDHAT</p></div>
+                                </div>
+                                <div class="relative group">
+                                    <img src="Img/ethers.png" class="h-40 w-40 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                                    <div class="flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>ETHERS.JS</p></div>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/button.js"></script>
+    </body>
+</html>

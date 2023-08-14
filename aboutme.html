@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="lg:h-screen">
+    <div class="flex flex-row justify-between">
+        <div class="flex lg:ml-20 md:ml-8 sm:ml-2">
+            <img src="Img/ethereum-eth-logo.png" class="h-20 w-20 mt-9">
+            <p class="text-3xl mt-16 font-thin font-mono text-transparent bg-clip-text custom-gradient-left">JAKA</p>
+        </div>
+        <div class="lg:flex justify-end md:hidden sm:hidden">
+            <div class="space-x-10 mt-16 ml-auto mr-36 text-xl">
+                <a href="index.html" class="text-LightBlue hover:text-white">Home</a>
+                <a href="mywork.html" class="text-LightBlue hover:text-white">My work</a>
+                <a href="skills.html" class="text-LightBlue hover:text-white">Skills</a>
+                <a href="aboutme.html" class="text-white font-bold">About me</a>
+                <a href="contact.html" class="text-LightBlue hover:text-white">Contact</a>
+            </div>
+        </div>
+        <button id="menu-btn" class="block hamburger tems-center mt-16 mr-16 lg:hidden focus:outline-none">
+            <span class="hamburger-top bg-LightBlue"></span>
+            <span class="hamburger-middle bg-LightBlue"></span>
+            <span class="hamburger-bottom bg-LightBlue"></span>
+        </button>
+    </div>
+    <div class="lg:hidden">
+        <div id="menu" class="z-20 absolute flex-col items-center backdrop-blur-xl hidden self-end left-6 right-6 py-8 mt-6 space-y-6 font-bold text-DarkBlue bg-LightBlue sm:w-auto sm:self-center drop-shadow-md">
+            <a href="index.html" class="hover:text-white text-lg">Home</a>
+            <a href="mywork.html" class="hover:text-white text-lg">My work</a>
+            <a href="skills.html" class="hover:text-white text-lg">Skills</a>
+            <a href="aboutme.html" class="text-white text-lg font-bold">About me</a>
+            <a href="contact.html" class="hover:text-white text-lg">Contact</a>
+        </div>
+    </div>
+    <div class="lg:space-y-8 sm:space-y-10">
+        <div class="lg:p-8 lg:mt-10 sm:mt-14">
+            <h1 class="text-4xl text-center text-LightBlue font-mono">ABOUT ME</h1>
+        </div>
+        <div class="lg:flex flex-row justify-center space-x-32 sm:hidden md:hidden">
+            <div class="backdrop-blur-2xl w-4/12 rounded-3xl">
+                <p class="text-justify text-xl text-white m-3 indent-8">
+                I am a master's student in business informatics from Slovenia. 
+                I feel in love with blockchain technologies in 2019, when I first invested into Bitcoin
+                and I have been learning about it ever since. I first started as an investor but with
+                time started to understand blockchain and its concepts, so I wanted to make my
+                own projects. I first started with Moralis Academy, back then it was Ivan On Tech
+                Academy. Through those courses I developed understanding of Javascript and
+                using Binance Apis to retreieve the data. For some time I was all in development of
+                trading bots. I made a lot of strategies programatically but I just didn’t seem
+                enough. That’s when I turned to solidity develpment. I searched all the internet
+                where I could get the</p>
+            </div>
+            <div class="backdrop-blur-2xl w-4/12 rounded-3xl">
+                <p class="text-justify text-xl text-white m-3">
+                most knowledge about blockchain development.
+                I found this amazing 32-hour course taught by no other than Patrick Collins himself.
+                Throughout the course, I developed strong understanding of solidity development
+                and hardhat. From there I still wanted to get more knowledge so I started
+                CryptoZombies course which I finished in no time. After I got all the knowledge I
+                needed, I started doing my own projects. Here I am now, presenting my portoflio
+                page with the work I have done...
+                </p>
+                <!-- <div class="p-14 flex flex-row justify-center space-x-1">
+                    <a href="#" class=""><p class=" text-white">Click here to check my resume |</p></a>
+                    <a href="#" class=""><img src="Img/linkclick.png" class="h-6 w-6 invert"></a>
+                </div> -->
+            </div>
+        </div>
+        <div class="flex flex-row justify-center lg:hidden">
+            <div class="backdrop-blur-2xl w-8/12 rounded-3xl">
+                <p class="text-justify md:text-xl sm:text-lg  text-white m-3 indent-8">
+                I am a master's student in business informatics from Slovenia. 
+                I feel in love with blockchain technologies in 2019, when I first invested into Bitcoin
+                and I have been learning about it ever since. I first started as an investor but with
+                time started to understand blockchain and its concepts, so I wanted to make my
+                own projects. I first started with Moralis Academy, back then it was Ivan On Tech
+                Academy. Through those courses I developed understanding of Javascript and
+                using Binance Apis to retreieve the data. For some time I was all in development of
+                trading bots. I made a lot of strategies programatically but I just didn’t seem
+                enough. That’s when I turned to solidity develpment. I searched all the internet
+                where I could get the
+                most knowledge about blockchain development.
+                I found this amazing 32-hour course taught by no other than Patrick Collins himself.
+                Throughout the course, I developed strong understanding of solidity development
+                and hardhat. From there I still wanted to get more knowledge so I started
+                CryptoZombies course which I finished in no time. After I got all the knowledge I
+                needed, I started doing my own projects. Here I am now, presenting my portoflio
+                page with the work I have done...
+                </p>
+            </div>
+    </div>
+    <script src="js/button.js"></script>
+</body>
+</html>
