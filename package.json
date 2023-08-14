@@ -1,13 +1,10 @@
 {
   "version": "1.0.0",
   "description": "This is my portfolio",
-  "homepage": "https://BChainbuddy.github.io/PortfolioWebsite",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "tailwindcss -i ./src/input.css -o ./build/dist/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./build/dist/output.css --watch"
   },
   "author": "JakaPotokar",
   "devDependencies": {
