@@ -618,10 +618,6 @@ video {
   margin-top: 2.25rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .block {
   display: block;
 }
@@ -698,20 +694,8 @@ video {
   width: 1.5rem;
 }
 
-.w-8\/12 {
-  width: 66.666667%;
-}
-
 .w-80 {
   width: 20rem;
-}
-
-.w-10\/12 {
-  width: 83.333333%;
-}
-
-.w-11\/12 {
-  width: 91.666667%;
 }
 
 .grid-cols-2 {
@@ -838,11 +822,6 @@ video {
   border-width: 2px;
 }
 
-.border-cyan-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(34 211 238 / var(--tw-border-opacity));
-}
-
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
@@ -852,28 +831,20 @@ video {
   padding: 3.5rem;
 }
 
-.p-20 {
-  padding: 5rem;
+.p-16 {
+  padding: 4rem;
 }
 
-.p-40 {
-  padding: 10rem;
+.p-36 {
+  padding: 9rem;
 }
 
 .p-8 {
   padding: 2rem;
 }
 
-.p-16 {
-  padding: 4rem;
-}
-
 .py-8 {
   padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.pb-8 {
   padding-bottom: 2rem;
 }
 
@@ -1136,17 +1107,13 @@ body {
 }
 
 @media (min-width: 240px) {
-  .sm\:m-3 {
-    margin: 0.75rem;
-  }
-
-  .sm\:m-4 {
-    margin: 1rem;
-  }
-
   .sm\:mx-2 {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+
+  .sm\:mb-16 {
+    margin-bottom: 4rem;
   }
 
   .sm\:ml-2 {
@@ -1157,20 +1124,12 @@ body {
     margin-top: 3.5rem;
   }
 
-  .sm\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
-  .sm\:mb-1 {
-    margin-bottom: 0.25rem;
-  }
-
-  .sm\:mb-16 {
-    margin-bottom: 4rem;
-  }
-
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:w-10\/12 {
+    width: 83.333333%;
   }
 
   .sm\:w-72 {
@@ -1191,14 +1150,6 @@ body {
 
   .sm\:w-screen {
     width: 100vw;
-  }
-
-  .sm\:w-8\/12 {
-    width: 66.666667%;
-  }
-
-  .sm\:w-10\/12 {
-    width: 83.333333%;
   }
 
   .sm\:flex-col {
@@ -1247,10 +1198,6 @@ body {
     align-self: center;
   }
 
-  .sm\:border {
-    border-width: 1px;
-  }
-
   .sm\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
@@ -1276,22 +1223,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:m-2 {
-    margin: 0.5rem;
-  }
-
-  .md\:m-3 {
-    margin: 0.75rem;
-  }
-
-  .md\:m-4 {
-    margin: 1rem;
-  }
-
-  .md\:m-5 {
-    margin: 1.25rem;
-  }
-
   .md\:ml-4 {
     margin-left: 1rem;
   }
@@ -1316,10 +1247,6 @@ body {
     height: 15rem;
   }
 
-  .md\:h-screen {
-    height: 100vh;
-  }
-
   .md\:w-10\/12 {
     width: 83.333333%;
   }
@@ -1332,16 +1259,16 @@ body {
     width: 58.333333%;
   }
 
+  .md\:w-8\/12 {
+    width: 66.666667%;
+  }
+
   .md\:w-96 {
     width: 24rem;
   }
 
   .md\:w-auto {
     width: auto;
-  }
-
-  .md\:w-8\/12 {
-    width: 66.666667%;
   }
 
   .md\:flex-col {
