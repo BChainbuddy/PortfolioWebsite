@@ -5,10 +5,12 @@
 body {
   background-image: url("../Img/background6.jpg");
   background-size: cover;
+  min-height: 100vh; /* Ensure the body covers the full viewport height */
+  margin: 0; /* Remove any default margins */
+  background-repeat: no-repeat;
   backdrop-filter: blur(3px);
-  background-repeat: repeat;
-  background-position: center center;
-  background-position: center 25%;
+  background-position: center;
+  background-attachment: fixed; /* This ensures that the background remains fixed when scrolling */
 }
 
 .bg-LightBlue {

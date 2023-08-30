@@ -7,11 +7,16 @@
 body {
   background-image: url("../Img/background6.jpg");
   background-size: cover;
+  min-height: 100vh;
+  /* Ensure the body covers the full viewport height */
+  margin: 0;
+  /* Remove any default margins */
+  background-repeat: no-repeat;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  background-repeat: repeat;
-  background-position: center center;
-  background-position: center 25%;
+  background-position: center;
+  background-attachment: fixed;
+  /* This ensures that the background remains fixed when scrolling */
 }
 
 .bg-LightBlue {
@@ -115,9 +120,7 @@ body {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
-/*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
-*/
+/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -787,6 +790,10 @@ video {
   height: 20rem;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -959,6 +966,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .border-2{
   border-width: 2px;
 }
@@ -978,18 +989,6 @@ video {
 
 .p-2{
   padding: 0.5rem;
-}
-
-.p-12{
-  padding: 3rem;
-}
-
-.p-1{
-  padding: 0.25rem;
-}
-
-.p-14{
-  padding: 3.5rem;
 }
 
 .py-8{
@@ -1051,6 +1050,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1059,11 +1063,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .font-bold{
@@ -1105,11 +1104,6 @@ video {
 
 .invert{
   --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.invert-0{
-  --tw-invert: invert(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
