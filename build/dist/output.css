@@ -790,10 +790,6 @@ video {
   height: 20rem;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
 .w-1\/2{
   width: 50%;
 }
@@ -836,6 +832,14 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.cursor-not-allowed{
+  cursor: not-allowed;
+}
+
+.cursor-default{
+  cursor: default;
 }
 
 .grid-cols-2{
@@ -964,10 +968,6 @@ video {
 
 .rounded-xl{
   border-radius: 0.75rem;
-}
-
-.border{
-  border-width: 1px;
 }
 
 .border-2{
@@ -1596,10 +1596,6 @@ body {
 
   .lg\:h-80{
     height: 20rem;
-  }
-
-  .lg\:h-screen{
-    height: 100vh;
   }
 
   .lg\:w-10\/12{
