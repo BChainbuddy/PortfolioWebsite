@@ -13,6 +13,70 @@ body {
   background-attachment: fixed; /* This ensures that the background remains fixed when scrolling */
 }
 
+.glowing-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.2em; /* Adjust the distance of the underline from the text */
+}
+
+.glowing-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* Adjust the distance of the underline from the text */
+  width: 100%;
+  height: 6px; /* Adjust the thickness of the underline */
+  background-image: linear-gradient(
+    90deg,
+    #a0d5f7,
+    #b4e3ff,
+    #a0d5f7
+  ); /* Light blue gradient colors */
+  background-repeat: no-repeat;
+  background-size: 200% 100%; /* Add a transition for the glowing effect */
+  background-position: 100%;
+  border-radius: 5px; /* Adjust the corner rounding */
+  animation: glowing-underline-animation 2s infinite linear;
+}
+
+@keyframes glowing-underline-animation {
+  0% {
+    background-position: 100%;
+  }
+  50% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.text-glow {
+  font-size: 24px;
+  background-image: linear-gradient(
+    90deg,
+    #a0d5f7,
+    #b4e3ff,
+    #a0d5f7
+  ); /* Light blue gradient colors */
+  -webkit-background-clip: text; /* Apply the gradient as text fill */
+  background-clip: text; /* Apply the gradient as text fill */
+  color: transparent; /* Hide the original text */
+  animation: glowing-text 2s infinite linear;
+}
+
+@keyframes glowing-text {
+  0% {
+    background-position: 100%;
+  }
+  50% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
 .bg-LightBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(169 100% 41% / var(--tw-bg-opacity));
