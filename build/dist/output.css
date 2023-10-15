@@ -19,6 +19,23 @@ body {
   /* This ensures that the background remains fixed when scrolling */
 }
 
+/* Show scrollbar when actively scrolling */
+
+body::-webkit-scrollbar-thumb {
+  background: lightblue;
+  /* Adjust this to your preferred scrollbar color */
+}
+
+/* Hide scrollbar track and buttons */
+
+body::-webkit-scrollbar {
+  width: 6px;
+  /* Adjust the width to your preference */
+  height: 6px;
+  background: transparent;
+  /* Hide scrollbar track */
+}
+
 .glowing-underline {
   position: relative;
   display: inline-block;
@@ -808,6 +825,10 @@ video {
   margin-top: 4rem;
 }
 
+.mt-3{
+  margin-top: 0.75rem;
+}
+
 .block{
   display: block;
 }
@@ -866,6 +887,10 @@ video {
 
 .w-4\/12{
   width: 33.333333%;
+}
+
+.w-52{
+  width: 13rem;
 }
 
 .w-6{
@@ -1002,8 +1027,16 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
 .rounded-xl{
   border-radius: 0.75rem;
+}
+
+.border-8{
+  border-width: 8px;
 }
 
 .bg-clip-text{
@@ -1042,6 +1075,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -1068,6 +1105,11 @@ video {
 
 .font-serif{
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl{
@@ -1322,6 +1364,11 @@ body {
   }
 }
 
+.hover\:bg-teal-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 148 136 / var(--tw-bg-opacity));
+}
+
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1562,6 +1609,10 @@ body {
     margin: 1rem;
   }
 
+  .md\:ml-20{
+    margin-left: 5rem;
+  }
+
   .md\:ml-4{
     margin-left: 1rem;
   }
@@ -1572,6 +1623,10 @@ body {
 
   .md\:mt-0{
     margin-top: 0px;
+  }
+
+  .md\:mt-1{
+    margin-top: 0.25rem;
   }
 
   .md\:mt-14{
@@ -1702,12 +1757,12 @@ body {
     background-color: transparent;
   }
 
-  .md\:p-16{
-    padding: 4rem;
-  }
-
   .md\:p-36{
     padding: 9rem;
+  }
+
+  .md\:p-4{
+    padding: 1rem;
   }
 
   .md\:p-8{
@@ -1729,12 +1784,20 @@ body {
     padding-bottom: 10rem;
   }
 
+  .md\:pb-10{
+    padding-bottom: 2.5rem;
+  }
+
   .md\:pb-14{
     padding-bottom: 3.5rem;
   }
 
-  .md\:pb-16{
-    padding-bottom: 4rem;
+  .md\:pt-16{
+    padding-top: 4rem;
+  }
+
+  .md\:pt-3{
+    padding-top: 0.75rem;
   }
 
   .md\:text-center{

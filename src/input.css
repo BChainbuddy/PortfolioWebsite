@@ -13,6 +13,18 @@ body {
   background-attachment: fixed; /* This ensures that the background remains fixed when scrolling */
 }
 
+/* Show scrollbar when actively scrolling */
+body::-webkit-scrollbar-thumb {
+  background: lightblue; /* Adjust this to your preferred scrollbar color */
+}
+
+/* Hide scrollbar track and buttons */
+body::-webkit-scrollbar {
+  width: 6px; /* Adjust the width to your preference */
+  height: 6px;
+  background: transparent; /* Hide scrollbar track */
+}
+
 .glowing-underline {
   position: relative;
   display: inline-block;
