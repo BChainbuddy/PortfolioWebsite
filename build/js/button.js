@@ -9,6 +9,7 @@ btn.addEventListener("click", () => {
 
 const btn2 = document.getElementById("view-button");
 const nav2 = document.getElementById("work");
+const nav3 = document.getElementById("work2");
 const text = document.getElementById("view-more");
 const text2 = document.getElementById("view-less");
 const btn2div = document.getElementById("btn-div");
@@ -17,6 +18,8 @@ btn2.addEventListener("click", () => {
   //SHOW ALL
   nav2.classList.toggle("lg:flex");
   nav2.classList.toggle("lg:hidden");
+  nav3.classList.toggle("lg:flex");
+  nav3.classList.toggle("lg:hidden");
   //VIEW MORE
   text.classList.toggle("hidden");
   text.classList.toggle("flex");

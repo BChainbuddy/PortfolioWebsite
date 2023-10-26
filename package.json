@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "description": "This is my portfolio",
-  "main": "index.html",
+  "main": "build/index.html",
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./build/dist/output.css",
     "watch": "tailwindcss -i ./src/input.css -o ./build/dist/output.css --watch"
