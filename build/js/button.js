@@ -18,13 +18,21 @@ const allProjects = document.getElementById("allProjects");
 const filterMenu = document.getElementById("filterMenu");
 const filterButton = document.getElementById("filterButton");
 const filter = document.getElementById("filter");
+const projectGrid = document.getElementById("grid");
+const recentlyAddedProjects = document.getElementById("recentlyAddedProjects");
 
 btn2.addEventListener("click", () => {
+  // RECENTLY ADDED PROJECTS
+  recentlyAddedProjects.classList.toggle("hidden");
+  recentlyAddedProjects.classList.toggle("flex");
   //SHOW ALL
-  nav2.classList.toggle("lg:flex");
-  nav2.classList.toggle("lg:hidden");
-  nav3.classList.toggle("lg:flex");
-  nav3.classList.toggle("lg:hidden");
+  // nav2.classList.toggle("lg:flex");
+  // nav2.classList.toggle("lg:hidden");
+  // nav3.classList.toggle("lg:flex");
+  // nav3.classList.toggle("lg:hidden");
+  projectGrid.classList.toggle("lg:grid");
+  projectGrid.classList.toggle("lg:hidden");
+
   //RECENTLY ADDED AND ALL PROJECTS
   recentlyAdded.classList.toggle("hidden");
   recentlyAdded.classList.toggle("flex");
@@ -47,7 +55,6 @@ btn2.addEventListener("click", () => {
 });
 
 //FILTER
-
 const filterJavascript = document.getElementById("filterJavascript");
 const filterPython = document.getElementById("filterPython");
 const filterSolidity = document.getElementById("filterSoldity");
@@ -59,6 +66,8 @@ const pythonContent = document.getElementsByClassName("python");
 const solidityContent = document.getElementsByClassName("solidity");
 const nextjsContent = document.getElementsByClassName("nextjs");
 const hardhatContent = document.getElementsByClassName("hardhat");
+const projects = document.getElementsByClassName("project");
+const filterIcons = document.getElementsByClassName("filterIcon");
 
 filterButton.addEventListener("click", () => {
   filterMenu.classList.toggle("hidden");
@@ -70,56 +79,141 @@ filterButton.addEventListener("click", () => {
 });
 
 filterJavascript.addEventListener("click", () => {
-  for (let i = 0; i < javascriptContent.length; i++) {
-    if (javascriptContent[i].classList.contains("border-8")) {
-      javascriptContent[i].classList.toggle("bg-white");
+  //TO CHOOSE FILTER
+  for (let i = 0; i < filterIcons.length; i++) {
+    if (filterIcons[i].classList.contains("javascript")) {
+      filterIcons[i].classList.toggle("bg-white");
     } else {
-      javascriptContent[i].classList.toggle("flex");
-      javascriptContent[i].classList.toggle("hidden");
+      if (filterIcons[i].classList.contains("bg-white")) {
+        filterIcons[i].classList.remove("bg-white");
+      }
+    }
+  }
+  //TO SHOW THE PROJECTS
+  for (let i = 0; projects.length; i++) {
+    if (
+      !projects[i].classList.contains("javascript") &&
+      !projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.add("hidden");
+    } else if (
+      projects[i].classList.contains("javascript") &&
+      projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.remove("hidden");
+      projects[i].classList.toggle("hidden");
     }
   }
 });
 
 filterPython.addEventListener("click", () => {
-  for (let i = 0; i < pythonContent.length; i++) {
-    if (pythonContent[i].classList.contains("border-8")) {
-      pythonContent[i].classList.toggle("bg-white");
+  //TO CHOOSE FILTER
+  for (let i = 0; i < filterIcons.length; i++) {
+    if (filterIcons[i].classList.contains("python")) {
+      filterIcons[i].classList.toggle("bg-white");
     } else {
-      pythonContent[i].classList.toggle("flex");
-      pythonContent[i].classList.toggle("hidden");
+      if (filterIcons[i].classList.contains("bg-white")) {
+        filterIcons[i].classList.remove("bg-white");
+      }
+    }
+  }
+  //TO SHOW THE PROJECTS
+  for (let i = 0; projects.length; i++) {
+    if (
+      !projects[i].classList.contains("python") &&
+      !projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.add("hidden");
+    } else if (
+      projects[i].classList.contains("python") &&
+      projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.remove("hidden");
+      projects[i].classList.toggle("hidden");
     }
   }
 });
 
 filterSolidity.addEventListener("click", () => {
-  for (let i = 0; i < solidityContent.length; i++) {
-    if (solidityContent[i].classList.contains("border-8")) {
-      solidityContent[i].classList.toggle("bg-white");
+  //TO CHOOSE FILTER
+  for (let i = 0; i < filterIcons.length; i++) {
+    if (filterIcons[i].classList.contains("solidity")) {
+      filterIcons[i].classList.toggle("bg-white");
     } else {
-      solidityContent[i].classList.toggle("flex");
-      solidityContent[i].classList.toggle("hidden");
+      if (filterIcons[i].classList.contains("bg-white")) {
+        filterIcons[i].classList.remove("bg-white");
+      }
+    }
+  }
+  //TO SHOW THE PROJECTS
+  for (let i = 0; projects.length; i++) {
+    if (
+      !projects[i].classList.contains("solidity") &&
+      !projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.add("hidden");
+    } else if (
+      projects[i].classList.contains("solidity") &&
+      projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.remove("hidden");
+      projects[i].classList.toggle("hidden");
     }
   }
 });
 
 filterNextjs.addEventListener("click", () => {
-  for (let i = 0; i < nextjsContent.length; i++) {
-    if (nextjsContent[i].classList.contains("border-8")) {
-      nextjsContent[i].classList.toggle("bg-white");
+  //TO CHOOSE FILTER
+  for (let i = 0; i < filterIcons.length; i++) {
+    if (filterIcons[i].classList.contains("nextjs")) {
+      filterIcons[i].classList.toggle("bg-white");
     } else {
-      nextjsContent[i].classList.toggle("flex");
-      nextjsContent[i].classList.toggle("hidden");
+      if (filterIcons[i].classList.contains("bg-white")) {
+        filterIcons[i].classList.remove("bg-white");
+      }
+    }
+  }
+  //TO SHOW THE PROJECTS
+  for (let i = 0; projects.length; i++) {
+    if (
+      !projects[i].classList.contains("nextjs") &&
+      !projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.add("hidden");
+    } else if (
+      projects[i].classList.contains("nextjs") &&
+      projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.remove("hidden");
+      projects[i].classList.toggle("hidden");
     }
   }
 });
 
 filterHardat.addEventListener("click", () => {
-  for (let i = 0; i < hardhatContent.length; i++) {
-    if (hardhatContent[i].classList.contains("border-8")) {
-      hardhatContent[i].classList.toggle("bg-white");
+  //TO CHOOSE FILTER
+  for (let i = 0; i < filterIcons.length; i++) {
+    if (filterIcons[i].classList.contains("hardhat")) {
+      filterIcons[i].classList.toggle("bg-white");
     } else {
-      hardhatContent[i].classList.toggle("flex");
-      hardhatContent[i].classList.toggle("hidden");
+      if (filterIcons[i].classList.contains("bg-white")) {
+        filterIcons[i].classList.remove("bg-white");
+      }
+    }
+  }
+  //TO SHOW THE PROJECTS
+  for (let i = 0; projects.length; i++) {
+    if (
+      !projects[i].classList.contains("hardhat") &&
+      !projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.add("hidden");
+    } else if (
+      projects[i].classList.contains("hardhat") &&
+      projects[i].classList.contains("hidden")
+    ) {
+      projects[i].classList.remove("hidden");
+      projects[i].classList.toggle("hidden");
     }
   }
 });

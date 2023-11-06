@@ -49,24 +49,25 @@
                 </button>
                 <div id="filterMenu" class="hidden flex-col absolute border-LightBlue border-8 rounded-lg w-36 bg-teal-900 z-10 py-3">
                     <button id="filterJavascript" class="flex flex-row my-1 hover:bg-cyan-200">
-                        <div class="w-2/3"><p class="text-center text-LightBlue">Javascript</p></div><div class="w-1/3 my-auto"><div class="javascript border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
+                        <div class="w-2/3"><p class="text-center text-LightBlue">Javascript</p></div><div class="w-1/3 my-auto"><div class="filterIcon javascript border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
                     </button>
                     <button id="filterPython" class="flex flex-row my-1 hover:bg-cyan-200">
-                        <div class="w-2/3"><p class="text-center text-LightBlue">Python</p></div><div class="w-1/3 my-auto"><div class="python border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
+                        <div class="w-2/3"><p class="text-center text-LightBlue">Python</p></div><div class="w-1/3 my-auto"><div class="filterIcon python border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
                     </button>
                     <button id="filterSoldity" class="flex flex-row my-1 hover:bg-cyan-200">
-                        <div class="w-2/3"><p class="text-center text-LightBlue">Solidity</p></div><div class="w-1/3 my-auto"><div class="solidity border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
+                        <div class="w-2/3"><p class="text-center text-LightBlue">Solidity</p></div><div class="w-1/3 my-auto"><div class="filterIcon solidity border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
                     </button>
                     <button id="filterNextjs" class="flex flex-row my-1 hover:bg-cyan-200">
-                        <div class="w-2/3"><p class="text-center text-LightBlue">Nextjs</p></div><div class="w-1/3 my-auto"><div class="nextjs border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
+                        <div class="w-2/3"><p class="text-center text-LightBlue">Nextjs</p></div><div class="w-1/3 my-auto"><div class="filterIcon nextjs border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
                     </button>
                     <button id="filterHardhat" class="flex flex-row my-1 hover:bg-cyan-200">
-                        <div class="w-2/3"><p class="text-center text-LightBlue">Hardhat</p></div><div class="w-1/3 my-auto"><div class="hardhat border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
+                        <div class="w-2/3"><p class="text-center text-LightBlue">Hardhat</p></div><div class="w-1/3 my-auto"><div class="filterIcon hardhat border-LightBlue border-8 w-3 h-3 mx-auto"></div></div>
                     </button>
                 </div>
             </div>
         </div>
-        <div class="flex lg:flex-row sm:mt-12 md:mt-0 sm:flex-col md:px-16  md:pt-3 lg:space-x-32 sm:space-y-20 md:space-y-20 lg:space-y-0 lg:justify-center sm:items-center md:items-center lg:items-stretch">
+        <!-- RECENTLY ADDED -->
+        <div id="recentlyAddedProjects" class="flex lg:flex-row sm:mt-12 md:mt-0 sm:flex-col md:px-16  md:pt-3 lg:space-x-32 sm:space-y-20 md:space-y-20 lg:space-y-0 lg:justify-center sm:items-center md:items-center lg:items-stretch">
             <div id="dex" class="flex flex-col sm:w-72 md:w-96 lg:w-3/12 space-y-4">
                 <div class="sm:justify-center md:justify-center text-xs text-white flex sm:flex-row">
                     <p class="sm:hidden md:flex"> 
@@ -158,6 +159,7 @@
                 </div>
             </div>
         </div>
+        <!-- SM AND MD WORK (NEED TO REDO) -->
         <div id="work" class="sm:flex lg:hidden lg:flex-row sm:mt-20 md:mt-0 sm:flex-col md:pb-10 md:px-16 md:pt-16 md:py-10 lg:space-x-32 sm:space-y-20 md:space-y-20 lg:space-y-0 lg:justify-center sm:items-center md:items-center lg:items-stretch">
             <div id="coinflip" class="flex flex-col sm:w-72 md:w-96 lg:w-3/12 space-y-4">
                 <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
@@ -273,6 +275,250 @@
         </div>
         <div id="work2" class="sm:flex lg:hidden lg:flex-row sm:mt-20 md:mt-0 sm:flex-col sm:pb-8 md:pb-10 md:px-16 md:pt-16 md:py-10 lg:space-x-32 sm:space-y-20 md:space-y-20 lg:space-y-0 lg:justify-center sm:items-center md:items-center lg:items-stretch">
             <div id="lotterydapp" class="flex flex-col sm:w-72 md:w-96 lg:w-3/12 space-y-4">
+                <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/BChainbuddy/CoinFlipBackend" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for backend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                    <a href="https://github.com/BChainbuddy/CoinFlipFrontend" class="sm:flex md:hidden flex flex-row space-x-0.5">
+                        <p>Click here for frontend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/hardhatplaceholder.jpeg" class="h-48 shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/BChainbuddy/nextjs-smartcontract-lottery-fcc">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">  
+                                        <p>Click to see the source code for FRONTEND...</p>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/BChainbuddy/SmartContractRaffle-fcc">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for BACKEND...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white font-bold m-3">
+                        This is a lottery dapp. I made this dapp when I was going through freecodecamp
+                        32-hour course taught by Patrick Collins.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- GRID -->
+        <div id="grid" class="sm:hidden lg:hidden grid-cols-3 place-items-center gap-y-28 p-10 items-stretch">
+            <div id="dex" class=" project javascript nextjs flex flex-col w-80 space-y-4">
+                <div class="sm:justify-center md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/BChainbuddy/decentralizedExchange" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for frontend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/dexScreenshot.png" class="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/BChainbuddy/decentralizedExchange">
+                                    <div class="opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-gray-300 font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for FRONTEND...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white font-bold m-3">
+                        This is a decentralized exchange where the user gets the ability to exchange different ethereum tokens based on Uniswap Liquidity pools. This project is made with nextjs. 
+                    </p>
+                </div>
+            </div>
+            <div id="liquiditypool" class=" project solidity javascript hardhat flex flex-col w-80 space-y-4">
+                <div class="sm:justify-center md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/BChainbuddy/LiquidityPool" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for backend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/hardhatplaceholder.jpeg" class="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/BChainbuddy/LiquidityPool">
+                                    <div class="opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for BACKEND...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white font-bold m-3">
+                        My very own Liquidity Pool. It is made with hardhadat using solidity and javascript. It has lots of functionalities such as exchange of tokens, liquidity providing,
+                        yield farming, and much more...
+                    </p>
+                </div>
+            </div>
+            <div id="dao" class=" project solidity javascript hardhat flex flex-col w-80 space-y-4">
+                <div class="sm:justify-center md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/BChainbuddy/CharityDAO.git" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for backend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/hardhatplaceholder.jpeg" class="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/BChainbuddy/CharityDAO.git">
+                                    <div class="opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for BACKEND...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white font-bold m-3">
+                        My very own openzeppelin DAO intergration. This is a charity DAO, which enables the charities to get the funding with little to no intermediate cost fast and reliable. The project is made with hardhat.                     </p>
+                </div>
+            </div>
+            <div id="coinflip" class=" project solidity javascript hardhat nextjs flex flex-col w-80 space-y-4">
+                <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/BChainbuddy/CoinFlipBackend" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for backend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                    <a href="https://github.com/BChainbuddy/CoinFlipFrontend" class="sm:flex md:hidden flex flex-row space-x-0.5">
+                        <p>Click here for frontend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/CoinflipMinigameImage.png" class="h-48 shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/BChainbuddy/CoinFlipFrontend">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">  
+                                        <p>Click to see the source code for FRONTEND...</p>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/BChainbuddy/CoinFlipBackend">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for BACKEND...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white font-bold m-3">
+                        My very own full stack dapp coinflip minigame made of two smart contracts.
+                        One is coinflip gameplay and the second one is gamecoin nft. The frontend is made with nextjs and
+                        tailwind css, and the backend is made with solidity and hardhat.
+                    </p>
+                </div>
+            </div>
+            <div id="nftmarketplace" class=" project solidity javascript hardhat nextjs flex flex-col w-80 space-y-4">
+                <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/BChainbuddy/CoinFlipBackend" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for backend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                    <a href="https://github.com/BChainbuddy/CoinFlipFrontend" class="sm:flex md:hidden flex flex-row space-x-0.5">
+                        <p>Click here for frontend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/Screenshot 2023-07-31 at 10.08.09.png" class="h-48 shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/BChainbuddy/NFTMarketplaceFrontend">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">  
+                                        <p>Click to see the source code for FRONTEND...</p>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/BChainbuddy/NFTMarketplaceBackend">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for BACKEND...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white font-bold m-3">
+                        This is a nftmarketplace dapp. I made this dapp when I was going through freecodecamp
+                        32-hour course taught by Patrick Collins.
+                    </p>
+                </div>
+            </div>
+            <div id="tradingbot" class=" project python flex flex-col w-80 space-y-4">
+                <div class="sm:justify-center md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/BChainbuddy/TradingBot" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for backend</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/PythonTrading.jpg" class="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/BChainbuddy/TradingBot">
+                                    <div class="opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-gray-300 font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for BACKEND...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white font-bold m-3">
+                        This is a trading bot made by me purely in python. The trading bot is based on double supertrend strategy with addition of heikin ashi. The exchange that it trades on is binance. 
+                    </p>
+                </div>
+            </div>
+            <div id="lotterydapp" class="project solidity javascript hardhat nextjs flex flex-col w-80 space-y-4">
                 <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
                     <p class="sm:hidden md:flex"> 
                         Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
