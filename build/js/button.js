@@ -50,11 +50,15 @@ btn2.addEventListener("click", () => {
 
 const filterJavascript = document.getElementById("filterJavascript");
 const filterPython = document.getElementById("filterPython");
-const filterSolidity = document.getElementById("filterSolidity");
+const filterSolidity = document.getElementById("filterSoldity");
 const filterNextjs = document.getElementById("filterNextjs");
 const filterHardat = document.getElementById("filterHardhat");
 
 const javascriptContent = document.getElementsByClassName("javascript");
+const pythonContent = document.getElementsByClassName("python");
+const solidityContent = document.getElementsByClassName("solidity");
+const nextjsContent = document.getElementsByClassName("nextjs");
+const hardhatContent = document.getElementsByClassName("hardhat");
 
 filterButton.addEventListener("click", () => {
   filterMenu.classList.toggle("hidden");
@@ -69,6 +73,53 @@ filterJavascript.addEventListener("click", () => {
   for (let i = 0; i < javascriptContent.length; i++) {
     if (javascriptContent[i].classList.contains("border-8")) {
       javascriptContent[i].classList.toggle("bg-white");
+    } else {
+      javascriptContent[i].classList.toggle("flex");
+      javascriptContent[i].classList.toggle("hidden");
+    }
+  }
+});
+
+filterPython.addEventListener("click", () => {
+  for (let i = 0; i < pythonContent.length; i++) {
+    if (pythonContent[i].classList.contains("border-8")) {
+      pythonContent[i].classList.toggle("bg-white");
+    } else {
+      pythonContent[i].classList.toggle("flex");
+      pythonContent[i].classList.toggle("hidden");
+    }
+  }
+});
+
+filterSolidity.addEventListener("click", () => {
+  for (let i = 0; i < solidityContent.length; i++) {
+    if (solidityContent[i].classList.contains("border-8")) {
+      solidityContent[i].classList.toggle("bg-white");
+    } else {
+      solidityContent[i].classList.toggle("flex");
+      solidityContent[i].classList.toggle("hidden");
+    }
+  }
+});
+
+filterNextjs.addEventListener("click", () => {
+  for (let i = 0; i < nextjsContent.length; i++) {
+    if (nextjsContent[i].classList.contains("border-8")) {
+      nextjsContent[i].classList.toggle("bg-white");
+    } else {
+      nextjsContent[i].classList.toggle("flex");
+      nextjsContent[i].classList.toggle("hidden");
+    }
+  }
+});
+
+filterHardat.addEventListener("click", () => {
+  for (let i = 0; i < hardhatContent.length; i++) {
+    if (hardhatContent[i].classList.contains("border-8")) {
+      hardhatContent[i].classList.toggle("bg-white");
+    } else {
+      hardhatContent[i].classList.toggle("flex");
+      hardhatContent[i].classList.toggle("hidden");
     }
   }
 });
