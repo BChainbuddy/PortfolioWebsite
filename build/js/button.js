@@ -21,6 +21,20 @@ const filter = document.getElementById("filter");
 const projectGrid = document.getElementById("grid");
 const recentlyAddedProjects = document.getElementById("recentlyAddedProjects");
 
+const filterJavascript = document.getElementById("filterJavascript");
+const filterPython = document.getElementById("filterPython");
+const filterSolidity = document.getElementById("filterSoldity");
+const filterNextjs = document.getElementById("filterNextjs");
+const filterHardat = document.getElementById("filterHardhat");
+
+const javascriptContent = document.getElementsByClassName("javascript");
+const pythonContent = document.getElementsByClassName("python");
+const solidityContent = document.getElementsByClassName("solidity");
+const nextjsContent = document.getElementsByClassName("nextjs");
+const hardhatContent = document.getElementsByClassName("hardhat");
+const projects = document.getElementsByClassName("project");
+const filterIcons = document.getElementsByClassName("filterIcon");
+
 btn2.addEventListener("click", () => {
   // RECENTLY ADDED PROJECTS
   recentlyAddedProjects.classList.toggle("hidden");
@@ -52,23 +66,20 @@ btn2.addEventListener("click", () => {
   } else {
     btn2div.classList.add("pb-10");
   }
+  //RESET THE FILTER
+  for (let i = 0; i < filterIcons.length; i++) {
+    if (filterIcons[i].classList.contains("bg-white")) {
+      filterIcons[i].classList.remove("bg-white");
+    }
+  }
+  for (let i = 0; i < projects.length; i++) {
+    if (projects[i].classList.contains("hidden")) {
+      projects[i].classList.remove("hidden");
+    }
+  }
 });
 
 //FILTER
-const filterJavascript = document.getElementById("filterJavascript");
-const filterPython = document.getElementById("filterPython");
-const filterSolidity = document.getElementById("filterSoldity");
-const filterNextjs = document.getElementById("filterNextjs");
-const filterHardat = document.getElementById("filterHardhat");
-
-const javascriptContent = document.getElementsByClassName("javascript");
-const pythonContent = document.getElementsByClassName("python");
-const solidityContent = document.getElementsByClassName("solidity");
-const nextjsContent = document.getElementsByClassName("nextjs");
-const hardhatContent = document.getElementsByClassName("hardhat");
-const projects = document.getElementsByClassName("project");
-const filterIcons = document.getElementsByClassName("filterIcon");
-
 filterButton.addEventListener("click", () => {
   filterMenu.classList.toggle("hidden");
   filterMenu.classList.toggle("flex");
@@ -78,142 +89,291 @@ filterButton.addEventListener("click", () => {
   filterMenu.classList.toggle("rounded-b-lg");
 });
 
+// ce kliknemo gor in noben nima bgja, potem dodamo bg in hiddamo vse ostale
+// ce kliknemo gor in ima neka druga bg, potem tam odstranimo bg, pri nasi dodamo, hiddamo vse elemente ki niso hiddani in odhiddamo vse elemente filtra
+// ce kliknemo gor in ima nasa bg, odstranimo bg in odhidamo vse ki so hiddani
+
 filterJavascript.addEventListener("click", () => {
-  //TO CHOOSE FILTER
+  let a = false; // false - no other filter is on, true - other filter is on
+  console.log("getting javascript projects");
   for (let i = 0; i < filterIcons.length; i++) {
-    if (filterIcons[i].classList.contains("javascript")) {
-      filterIcons[i].classList.toggle("bg-white");
-    } else {
-      if (filterIcons[i].classList.contains("bg-white")) {
-        filterIcons[i].classList.remove("bg-white");
+    if (
+      filterIcons[i].classList.contains("bg-white") &&
+      !filterIcons[i].classList.contains("javascript")
+    ) {
+      filterIcons[i].classList.remove("bg-white");
+      a = true;
+      console.log("a is true");
+      for (let c = 0; c < projects.length; c++) {
+        if (!projects[c].classList.contains("hidden")) {
+          projects[c].classList.add("hidden");
+        }
+      }
+      for (let c = 0; c < projects.length; c++) {
+        if (projects[c].classList.contains("javascript")) {
+          projects[c].classList.remove("hidden");
+        }
+      }
+      for (let d = 0; d < filterIcons.length; d++) {
+        if (filterIcons[d].classList.contains("javascript")) {
+          filterIcons[d].classList.add("bg-white");
+        }
       }
     }
   }
-  //TO SHOW THE PROJECTS
-  for (let i = 0; projects.length; i++) {
-    if (
-      !projects[i].classList.contains("javascript") &&
-      !projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.add("hidden");
-    } else if (
-      projects[i].classList.contains("javascript") &&
-      projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.remove("hidden");
-      projects[i].classList.toggle("hidden");
+  if (a == false) {
+    console.log("a is false");
+    for (let i = 0; i < filterIcons.length; i++) {
+      if (filterIcons[i].classList.contains("javascript")) {
+        console.log("found the button");
+        if (filterIcons[i].classList.contains("bg-white")) {
+          console.log("Button was on");
+          filterIcons[i].classList.remove("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (projects[c].classList.contains("hidden")) {
+              projects[c].classList.remove("hidden");
+            }
+          }
+        } else {
+          console.log("Button was off");
+          filterIcons[i].classList.add("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (!projects[c].classList.contains("javascript")) {
+              projects[c].classList.add("hidden");
+            }
+          }
+        }
+      }
     }
   }
 });
 
 filterPython.addEventListener("click", () => {
-  //TO CHOOSE FILTER
+  let a = false; // false - no other filter is on, true - other filter is on
+  console.log("getting python projects");
   for (let i = 0; i < filterIcons.length; i++) {
-    if (filterIcons[i].classList.contains("python")) {
-      filterIcons[i].classList.toggle("bg-white");
-    } else {
-      if (filterIcons[i].classList.contains("bg-white")) {
-        filterIcons[i].classList.remove("bg-white");
+    if (
+      filterIcons[i].classList.contains("bg-white") &&
+      !filterIcons[i].classList.contains("python")
+    ) {
+      filterIcons[i].classList.remove("bg-white");
+      a = true;
+      console.log("a is true");
+      for (let c = 0; c < projects.length; c++) {
+        if (!projects[c].classList.contains("hidden")) {
+          projects[c].classList.add("hidden");
+        }
+      }
+      for (let c = 0; c < projects.length; c++) {
+        if (projects[c].classList.contains("python")) {
+          projects[c].classList.remove("hidden");
+        }
+      }
+      for (let d = 0; d < filterIcons.length; d++) {
+        if (filterIcons[d].classList.contains("python")) {
+          filterIcons[d].classList.add("bg-white");
+        }
       }
     }
   }
-  //TO SHOW THE PROJECTS
-  for (let i = 0; projects.length; i++) {
-    if (
-      !projects[i].classList.contains("python") &&
-      !projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.add("hidden");
-    } else if (
-      projects[i].classList.contains("python") &&
-      projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.remove("hidden");
-      projects[i].classList.toggle("hidden");
+  if (a == false) {
+    console.log("a is false");
+    for (let i = 0; i < filterIcons.length; i++) {
+      if (filterIcons[i].classList.contains("python")) {
+        console.log("found the button");
+        if (filterIcons[i].classList.contains("bg-white")) {
+          console.log("Button was on");
+          filterIcons[i].classList.remove("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (projects[c].classList.contains("hidden")) {
+              projects[c].classList.remove("hidden");
+            }
+          }
+        } else {
+          console.log("Button was off");
+          filterIcons[i].classList.add("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (!projects[c].classList.contains("python")) {
+              projects[c].classList.add("hidden");
+            }
+          }
+        }
+      }
     }
   }
 });
 
 filterSolidity.addEventListener("click", () => {
-  //TO CHOOSE FILTER
+  let a = false; // false - no other filter is on, true - other filter is on
+  console.log("getting solidity projects");
   for (let i = 0; i < filterIcons.length; i++) {
-    if (filterIcons[i].classList.contains("solidity")) {
-      filterIcons[i].classList.toggle("bg-white");
-    } else {
-      if (filterIcons[i].classList.contains("bg-white")) {
-        filterIcons[i].classList.remove("bg-white");
+    if (
+      filterIcons[i].classList.contains("bg-white") &&
+      !filterIcons[i].classList.contains("solidity")
+    ) {
+      filterIcons[i].classList.remove("bg-white");
+      a = true;
+      console.log("a is true");
+      for (let c = 0; c < projects.length; c++) {
+        if (!projects[c].classList.contains("hidden")) {
+          projects[c].classList.add("hidden");
+        }
+      }
+      for (let c = 0; c < projects.length; c++) {
+        if (projects[c].classList.contains("solidity")) {
+          projects[c].classList.remove("hidden");
+        }
+      }
+      for (let c = 0; c < filterIcons.length; c++) {
+        if (filterIcons[i].classList.contains("solidity")) {
+          filterIcons[i].classList.add("bg-white");
+        }
+      }
+      for (let d = 0; d < filterIcons.length; d++) {
+        if (filterIcons[d].classList.contains("solidity")) {
+          filterIcons[d].classList.add("bg-white");
+        }
       }
     }
   }
-  //TO SHOW THE PROJECTS
-  for (let i = 0; projects.length; i++) {
-    if (
-      !projects[i].classList.contains("solidity") &&
-      !projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.add("hidden");
-    } else if (
-      projects[i].classList.contains("solidity") &&
-      projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.remove("hidden");
-      projects[i].classList.toggle("hidden");
+  if (a == false) {
+    console.log("a is false");
+    for (let i = 0; i < filterIcons.length; i++) {
+      if (filterIcons[i].classList.contains("solidity")) {
+        console.log("found the button");
+        if (filterIcons[i].classList.contains("bg-white")) {
+          console.log("Button was on");
+          filterIcons[i].classList.remove("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (projects[c].classList.contains("hidden")) {
+              projects[c].classList.remove("hidden");
+            }
+          }
+        } else {
+          console.log("Button was off");
+          filterIcons[i].classList.add("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (!projects[c].classList.contains("solidity")) {
+              projects[c].classList.add("hidden");
+            }
+          }
+        }
+      }
     }
   }
 });
 
 filterNextjs.addEventListener("click", () => {
-  //TO CHOOSE FILTER
+  let a = false; // false - no other filter is on, true - other filter is on
+  console.log("getting nextjs projects");
   for (let i = 0; i < filterIcons.length; i++) {
-    if (filterIcons[i].classList.contains("nextjs")) {
-      filterIcons[i].classList.toggle("bg-white");
-    } else {
-      if (filterIcons[i].classList.contains("bg-white")) {
-        filterIcons[i].classList.remove("bg-white");
+    if (
+      filterIcons[i].classList.contains("bg-white") &&
+      !filterIcons[i].classList.contains("nextjs")
+    ) {
+      filterIcons[i].classList.remove("bg-white");
+      a = true;
+      console.log("a is true");
+      for (let c = 0; c < projects.length; c++) {
+        if (!projects[c].classList.contains("hidden")) {
+          projects[c].classList.add("hidden");
+        }
+      }
+      for (let c = 0; c < projects.length; c++) {
+        if (projects[c].classList.contains("nextjs")) {
+          projects[c].classList.remove("hidden");
+        }
+      }
+      for (let c = 0; c < filterIcons.length; c++) {
+        if (filterIcons[i].classList.contains("nextjs")) {
+          filterIcons[i].classList.add("bg-white");
+        }
+      }
+      for (let d = 0; d < filterIcons.length; d++) {
+        if (filterIcons[d].classList.contains("nextjs")) {
+          filterIcons[d].classList.add("bg-white");
+        }
       }
     }
   }
-  //TO SHOW THE PROJECTS
-  for (let i = 0; projects.length; i++) {
-    if (
-      !projects[i].classList.contains("nextjs") &&
-      !projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.add("hidden");
-    } else if (
-      projects[i].classList.contains("nextjs") &&
-      projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.remove("hidden");
-      projects[i].classList.toggle("hidden");
+  if (a == false) {
+    console.log("a is false");
+    for (let i = 0; i < filterIcons.length; i++) {
+      if (filterIcons[i].classList.contains("nextjs")) {
+        console.log("found the button");
+        if (filterIcons[i].classList.contains("bg-white")) {
+          console.log("Button was on");
+          filterIcons[i].classList.remove("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (projects[c].classList.contains("hidden")) {
+              projects[c].classList.remove("hidden");
+            }
+          }
+        } else {
+          console.log("Button was off");
+          filterIcons[i].classList.add("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (!projects[c].classList.contains("nextjs")) {
+              projects[c].classList.add("hidden");
+            }
+          }
+        }
+      }
     }
   }
 });
 
 filterHardat.addEventListener("click", () => {
-  //TO CHOOSE FILTER
+  let a = false; // false - no other filter is on, true - other filter is on
+  console.log("getting hardhat projects");
   for (let i = 0; i < filterIcons.length; i++) {
-    if (filterIcons[i].classList.contains("hardhat")) {
-      filterIcons[i].classList.toggle("bg-white");
-    } else {
-      if (filterIcons[i].classList.contains("bg-white")) {
-        filterIcons[i].classList.remove("bg-white");
+    if (
+      filterIcons[i].classList.contains("bg-white") &&
+      !filterIcons[i].classList.contains("hardhat")
+    ) {
+      filterIcons[i].classList.remove("bg-white");
+      a = true;
+      console.log("a is true");
+      for (let c = 0; c < projects.length; c++) {
+        if (!projects[c].classList.contains("hidden")) {
+          projects[c].classList.add("hidden");
+        }
+      }
+      for (let c = 0; c < projects.length; c++) {
+        if (projects[c].classList.contains("hardhat")) {
+          projects[c].classList.remove("hidden");
+        }
+      }
+      for (let d = 0; d < filterIcons.length; d++) {
+        if (filterIcons[d].classList.contains("hardhat")) {
+          filterIcons[d].classList.add("bg-white");
+        }
       }
     }
   }
-  //TO SHOW THE PROJECTS
-  for (let i = 0; projects.length; i++) {
-    if (
-      !projects[i].classList.contains("hardhat") &&
-      !projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.add("hidden");
-    } else if (
-      projects[i].classList.contains("hardhat") &&
-      projects[i].classList.contains("hidden")
-    ) {
-      projects[i].classList.remove("hidden");
-      projects[i].classList.toggle("hidden");
+  if (a == false) {
+    console.log("a is false");
+    for (let i = 0; i < filterIcons.length; i++) {
+      if (filterIcons[i].classList.contains("hardhat")) {
+        console.log("found the button");
+        if (filterIcons[i].classList.contains("bg-white")) {
+          console.log("Button was on");
+          filterIcons[i].classList.remove("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (projects[c].classList.contains("hidden")) {
+              projects[c].classList.remove("hidden");
+            }
+          }
+        } else {
+          console.log("Button was off");
+          filterIcons[i].classList.add("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (!projects[c].classList.contains("hardhat")) {
+              projects[c].classList.add("hidden");
+            }
+          }
+        }
+      }
     }
   }
 });
