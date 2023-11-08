@@ -77,6 +77,14 @@ btn2.addEventListener("click", () => {
       projects[i].classList.remove("hidden");
     }
   }
+  if (filterMenu.classList.contains("flex")) {
+    filterMenu.classList.toggle("hidden");
+    filterMenu.classList.toggle("flex");
+    filterButton.classList.toggle("rounded-lg");
+    filterButton.classList.toggle("rounded-t-lg");
+    filterMenu.classList.toggle("rounded-lg");
+    filterMenu.classList.toggle("rounded-b-lg");s
+  }
 });
 
 //FILTER

@@ -757,6 +757,10 @@ video {
   position: relative;
 }
 
+.sticky{
+  position: sticky;
+}
+
 .inset-0{
   inset: 0px;
 }
@@ -1480,6 +1484,18 @@ body {
 }
 
 @media (min-width: 240px){
+  .sm\:sticky{
+    position: sticky;
+  }
+
+  .sm\:top-0{
+    top: 0px;
+  }
+
+  .sm\:z-10{
+    z-index: 10;
+  }
+
   .sm\:mx-2{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
