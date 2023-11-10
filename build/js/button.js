@@ -61,11 +61,11 @@ btn2.addEventListener("click", () => {
   text2.classList.toggle("flex");
   text2.classList.toggle("hidden");
   //CHANGE BUTTON CLASS
-  if (btn2div.classList.contains("pb-10")) {
-    btn2div.classList.remove("pb-10");
-  } else {
-    btn2div.classList.add("pb-10");
-  }
+  // if (btn2div.classList.contains("pb-10")) {
+  //   btn2div.classList.remove("pb-10");
+  // } else {
+  //   btn2div.classList.add("pb-10");
+  // }
   //RESET THE FILTER
   for (let i = 0; i < filterIcons.length; i++) {
     if (filterIcons[i].classList.contains("bg-white")) {
@@ -83,7 +83,8 @@ btn2.addEventListener("click", () => {
     filterButton.classList.toggle("rounded-lg");
     filterButton.classList.toggle("rounded-t-lg");
     filterMenu.classList.toggle("rounded-lg");
-    filterMenu.classList.toggle("rounded-b-lg");s
+    filterMenu.classList.toggle("rounded-b-lg");
+    s;
   }
 });
 
