@@ -37,8 +37,8 @@ const filterIcons = document.getElementsByClassName("filterIcon");
 
 btn2.addEventListener("click", () => {
   // RECENTLY ADDED PROJECTS
-  recentlyAddedProjects.classList.toggle("hidden");
-  recentlyAddedProjects.classList.toggle("flex");
+  // recentlyAddedProjects.classList.toggle("hidden");
+  recentlyAddedProjects.classList.toggle("lg:grid");
   //SHOW ALL
   // nav2.classList.toggle("lg:flex");
   // nav2.classList.toggle("lg:hidden");
