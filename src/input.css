@@ -105,6 +105,10 @@ body::-webkit-scrollbar {
   border: 2px solid hsl(169 100% 41%);
 }
 
+.hover\:border-LightBlue:hover {
+  border: 2px solid hsl(169 100% 41%);
+}
+
 .bg-DarkBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(169 100% 7% / var(--tw-bg-opacity));
