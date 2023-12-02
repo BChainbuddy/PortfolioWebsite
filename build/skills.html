@@ -41,12 +41,12 @@
             <div class="lg:p-8 lg:mt-10 sm:mt-14">
                 <h1 class="md:text-4xl sm:text-3xl text-center text-LightBlue font-mono">TECHNOLOGIES</h1>
             </div>
-            <!-- md,lg screen -->
-            <div class="md:flex sm:hidden md:space-y-20 md:flex-col px-12">
+            <!-- lg screen -->
+            <div class="lg:flex place-items-center sm:hidden lg:space-y-20 lg:flex-col px-12">
                 <!-- backend -->
-                <div class="md:w-10/12 flex ml-20">
+                <div class="flex mr-32">
                     <div class="flex-row flex items-center space-x-10 w-full">
-                        <h2 class="cursor-default w-2/12 text-3xl text-LightBlue text-center hover:border-LightBlue hover:border-2 rounded-2xl font-mono">BACKEND</h2>
+                        <h2 class="w-48 cursor-default text-3xl text-LightBlue text-center hover:border-LightBlue hover:border-2 rounded-2xl font-mono">BACKEND</h2>
                         <div class="space-x-6">
                             <div class="relative group inline-block">
                                 <img src="Img/javascript.png" class="md:h-24 md:w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
@@ -72,9 +72,9 @@
                     </div>
                 </div>
                 <!-- frontend -->
-                <div class="md:w-10/12 flex ml-20">
+                <div class="flex mr-20">
                     <div class="flex-row flex items-center space-x-10 w-full">
-                        <h2 class="cursor-default w-2/12 text-3xl text-LightBlue text-center font-mono hover:border-LightBlue hover:border-2 rounded-2xl">FRONTEND</h2>
+                        <h2 class="w-48 cursor-default text-3xl text-LightBlue text-center font-mono hover:border-LightBlue hover:border-2 rounded-2xl">FRONTEND</h2>
                         <div class="space-x-6">
                             <div class="relative group inline-block">
                                 <img src="Img/react3.png" class="md:h-24 md:w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
@@ -100,9 +100,9 @@
                     </div>
                 </div>
                 <!-- database -->
-                <div class="md:w-10/12 flex ml-20">
+                <div class="flex mr-96">
                     <div class="flex flex-row items-center space-x-10 w-full">
-                        <h2 class="cursor-default w-2/12 text-3xl text-LightBlue text-center font-mono hover:border-LightBlue hover:border-2 rounded-2xl">DATABASE</h2>
+                        <h2 class="w-48 cursor-default text-3xl text-LightBlue text-center font-mono hover:border-LightBlue hover:border-2 rounded-2xl">DATABASE</h2>
                         <div class="space-x-6">
                             <div class="relative group inline-block">
                                 <img src="Img/postgresql.jpg" class="md:h-24 md:w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
@@ -116,8 +116,8 @@
                     </div>
                 </div>
             </div>
-            <!-- sm screen-->
-            <div class="sm:flex md:hidden justify-center px-4">
+            <!-- sm and md screen-->
+            <div class="sm:flex lg:hidden justify-center px-4">
                 <div class="grid grid-cols-3 place-items-center gap-10">
                     <div class="relative group">
                         <img src="Img/react3.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
@@ -166,7 +166,7 @@
                 </div>
             </div>
         </div>
-        <div class="md:hidden lg:flex flex-col lg:space-y-16 sm:space-y-24 sm:pb-20 p-8">
+        <div class="sm:hidden lg:flex flex-col lg:space-y-16 sm:space-y-24 sm:pb-20 p-8">
             <div class="lg:p-8 lg:mt-10 sm:mt-14">
                 <h1 class="text-4xl text-center text-LightBlue font-mono">CERTIFICATES / LEARNING RESOURCES</h1>
             </div>
@@ -186,9 +186,9 @@
                     <img src="Img/codecademylogo.jpeg" class="w-1/2 ml-3 rounded-2xl"/>
                 </article>
                 <article class="flex flex-row">
-                    <img src="Img/FreeCodeCampCourse.png" class="w-1/2 mr-3 rounded-2xl"/>
+                    <img src="Img/FreeCodeCamp_logo.png" class="w-1/2 mr-3 rounded-2xl"/>
                     <div class="text-justify w-1/2 backdrop-blur-3xl border-LightBlue rounded-2xl py-5 px-8 ml-3 space-y-3">
-                        <h2 class="text-center text-LightBlue text-2xl font-mono">FREECODECAMP JAVASCRIPT BLOCKHAIN COURSE</h2>
+                        <h2 class="text-center text-LightBlue text-2xl font-mono">FREECODECAMP JAVASCRIPT BLOCKCHAIN COURSE</h2>
                         <p class="text-white">
                             This is the first real full web3 learning tutorial that set me up with all the needed techniques to 
                             write smart contracts and deploy them. In this course I learned solidity smart contract programming,
@@ -199,7 +199,18 @@
                         </p>
                     </div>
                 </article>
-
+                <article class="flex flex-row">
+                    <div class="text-justify w-1/2 backdrop-blur-3xl border-LightBlue rounded-2xl py-5 px-8 mr-3 space-y-3">
+                        <h2 class="text-center text-LightBlue text-2xl font-mono">CRYPTO ZOMBIES</h2>
+                        <p class="text-white">
+                            CryptoZombies is a very interesting online learning platform focusing on solidity development.
+                            The courses are very well structured and while you are learning you are actually building 
+                            a NFT game. I learned a lot about connecting smart contracts to each other, ERC20, ERC712,
+                            and a little frontend web3 development in react.<span><a href="https://cryptozombies.io" class="text-white underline ml-3">Learn more<img src="Img/linkclick.png" class="inline-block h-4 w-4 ml-0.5 mb-1 invert"></a></span>
+                        </p>
+                    </div>
+                    <img src="Img/cryptoZombiesLogo.png" class="w-1/2 ml-3 rounded-2xl"/>
+                </article>
             </div>
         </div>
         <script src="js/button.js"></script>
