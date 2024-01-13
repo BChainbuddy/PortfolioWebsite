@@ -26,12 +26,14 @@ const filterPython = document.getElementById("filterPython");
 const filterSolidity = document.getElementById("filterSoldity");
 const filterNextjs = document.getElementById("filterNextjs");
 const filterHardat = document.getElementById("filterHardhat");
+const filterReact = document.getElementById("filterReact");
 
 const javascriptContent = document.getElementsByClassName("javascript");
 const pythonContent = document.getElementsByClassName("python");
 const solidityContent = document.getElementsByClassName("solidity");
 const nextjsContent = document.getElementsByClassName("nextjs");
 const hardhatContent = document.getElementsByClassName("hardhat");
+const reactContent = document.getElementsByClassName("react");
 const projects = document.getElementsByClassName("project");
 const filterIcons = document.getElementsByClassName("filterIcon");
 
@@ -84,7 +86,6 @@ btn2.addEventListener("click", () => {
     filterButton.classList.toggle("rounded-t-lg");
     filterMenu.classList.toggle("rounded-lg");
     filterMenu.classList.toggle("rounded-b-lg");
-    s;
   }
 });
 
@@ -378,6 +379,61 @@ filterHardat.addEventListener("click", () => {
           filterIcons[i].classList.add("bg-white");
           for (let c = 0; c < projects.length; c++) {
             if (!projects[c].classList.contains("hardhat")) {
+              projects[c].classList.add("hidden");
+            }
+          }
+        }
+      }
+    }
+  }
+});
+
+filterReact.addEventListener("click", () => {
+  let a = false; // false - no other filter is on, true - other filter is on
+  console.log("getting react projects");
+  for (let i = 0; i < filterIcons.length; i++) {
+    if (
+      filterIcons[i].classList.contains("bg-white") &&
+      !filterIcons[i].classList.contains("react")
+    ) {
+      filterIcons[i].classList.remove("bg-white");
+      a = true;
+      console.log("a is true");
+      for (let c = 0; c < projects.length; c++) {
+        if (!projects[c].classList.contains("hidden")) {
+          projects[c].classList.add("hidden");
+        }
+      }
+      for (let c = 0; c < projects.length; c++) {
+        if (projects[c].classList.contains("react")) {
+          projects[c].classList.remove("hidden");
+        }
+      }
+      for (let d = 0; d < filterIcons.length; d++) {
+        if (filterIcons[d].classList.contains("react")) {
+          filterIcons[d].classList.add("bg-white");
+        }
+      }
+    }
+  }
+  if (a == false) {
+    console.log("a is false");
+    for (let i = 0; i < filterIcons.length; i++) {
+      if (filterIcons[i].classList.contains("react")) {
+        console.log("found the button");
+        if (filterIcons[i].classList.contains("bg-white")) {
+          console.log("Button was on");
+          filterIcons[i].classList.remove("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (projects[c].classList.contains("hidden")) {
+              projects[c].classList.remove("hidden");
+            }
+          }
+        } else {
+          console.log("Button was off");
+          filterIcons[i].classList.add("bg-white");
+          for (let c = 0; c < projects.length; c++) {
+            if (!projects[c].classList.contains("react")) {
               projects[c].classList.add("hidden");
             }
           }
