@@ -14,7 +14,6 @@ const viewButton = document.getElementById("btn-div");
 
 if (viewButton) {
   setTimeout(() => {
-    console.log(viewButton);
     viewButton.classList.toggle("view-end");
   });
 }
@@ -61,4 +60,23 @@ reset.addEventListener("click", () => {});
 
 opened.addEventListener("click", () => {
   recentlyAddedTitle.classList.toggle("titleRecentlyAdded-end");
+});
+
+const smprojects = document.querySelectorAll(".smproject");
+
+const smprojectObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((item) => {
+      if (!item.target.classList.contains("end-resource")) {
+        item.target.classList.toggle("end-resource", item.isIntersecting);
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+smprojects.forEach((item) => {
+  smprojectObserver.observe(item);
 });

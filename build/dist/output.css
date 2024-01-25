@@ -755,12 +755,20 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
 
 .relative{
   position: relative;
+}
+
+.sticky{
+  position: sticky;
 }
 
 .inset-0{
@@ -797,6 +805,18 @@ video {
 
 .top-0\.5{
   top: 0.125rem;
+}
+
+.top-5{
+  top: 1.25rem;
+}
+
+.top-10{
+  top: 2.5rem;
+}
+
+.top-12{
+  top: 3rem;
 }
 
 .-z-10{
@@ -1160,6 +1180,10 @@ video {
   border-width: 8px;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .border-cyan-200{
   --tw-border-opacity: 1;
   border-color: rgb(165 243 252 / var(--tw-border-opacity));
@@ -1195,6 +1219,25 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-cyan-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 145 178 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
+.bg-teal-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 253 250 / var(--tw-bg-opacity));
+}
+
 .bg-clip-text{
   -webkit-background-clip: text;
           background-clip: text;
@@ -1214,6 +1257,14 @@ video {
 
 .p-8{
   padding: 2rem;
+}
+
+.p-4{
+  padding: 1rem;
+}
+
+.p-0{
+  padding: 0px;
 }
 
 .px-10{
@@ -1251,6 +1302,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -1269,6 +1325,14 @@ video {
 
 .pt-4{
   padding-top: 1rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+
+.pb-0{
+  padding-bottom: 0px;
 }
 
 .text-center{
@@ -1917,6 +1981,10 @@ video {
     padding-bottom: 2rem;
   }
 
+  .sm\:pb-4{
+    padding-bottom: 1rem;
+  }
+
   .sm\:text-center{
     text-align: center;
   }
@@ -2017,6 +2085,18 @@ video {
     height: 15rem;
   }
 
+  .md\:h-12{
+    height: 3rem;
+  }
+
+  .md\:h-10{
+    height: 2.5rem;
+  }
+
+  .md\:h-11{
+    height: 2.75rem;
+  }
+
   .md\:w-16{
     width: 4rem;
   }
@@ -2047,6 +2127,18 @@ video {
 
   .md\:w-auto{
     width: auto;
+  }
+
+  .md\:w-12{
+    width: 3rem;
+  }
+
+  .md\:w-10{
+    width: 2.5rem;
+  }
+
+  .md\:w-11{
+    width: 2.75rem;
   }
 
   .md\:items-center{
@@ -2181,6 +2273,10 @@ video {
     margin-top: 2.5rem;
   }
 
+  .lg\:mt-16{
+    margin-top: 4rem;
+  }
+
   .lg\:flex{
     display: flex;
   }
@@ -2244,6 +2340,10 @@ video {
 
   .lg\:p-8{
     padding: 2rem;
+  }
+
+  .lg\:p-0{
+    padding: 0px;
   }
 
   .lg\:px-16{
