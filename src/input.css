@@ -7,8 +7,8 @@
 body {
   background-image: url("../Img/background6.jpg");
   background-size: cover;
-  min-height: 100vh; /* Ensure the body covers the full viewport height */
   margin: 0; /* Remove any default margins */
+  padding: 0;
   background-repeat: no-repeat;
   backdrop-filter: blur(3px);
   background-position: center;
@@ -406,6 +406,17 @@ body::-webkit-scrollbar {
 }
 
 .project-end {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.homepage-start {
+  transform: translateY(35px);
+  opacity: 0;
+  transition-duration: 1000ms;
+}
+
+.homepage-end {
   transform: translateY(0px);
   opacity: 1;
 }

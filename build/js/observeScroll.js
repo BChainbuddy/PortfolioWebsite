@@ -1,7 +1,7 @@
 const header = document.getElementById("header");
 let bounds = header.getBoundingClientRect().top;
 
-document.addEventListener("scroll", (event) => {
+document.addEventListener("scroll", () => {
   if (window.scrollY > bounds + 8) {
     //flex flex-row justify-between sm:items-center sm:pb-4 pt-4 lg:pb-0 border-bottom-LightBlue md:border-b-0 sm:bg-teal-950 md:bg-transparent
     //Change p, change bg
