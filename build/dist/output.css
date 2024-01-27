@@ -2091,6 +2091,10 @@ video {
     justify-content: normal;
   }
 
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
+
   .md\:justify-center{
     justify-content: center;
   }
