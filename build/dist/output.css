@@ -814,10 +814,6 @@ video {
   z-index: 20;
 }
 
-.m-0{
-  margin: 0px;
-}
-
 .m-3{
   margin: 0.75rem;
 }
@@ -1482,6 +1478,10 @@ video {
   transition-delay: 500ms;
 }
 
+.delay-0{
+  transition-delay: 0s;
+}
+
 /* body {
   background-image: url("../Img/background6.jpg");
   background-size: cover;
@@ -2089,10 +2089,6 @@ video {
 
   .md\:justify-normal{
     justify-content: normal;
-  }
-
-  .md\:justify-start{
-    justify-content: flex-start;
   }
 
   .md\:justify-center{
