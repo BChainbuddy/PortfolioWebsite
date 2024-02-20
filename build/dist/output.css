@@ -6,6 +6,17 @@
 
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
 body {
   background-image: url("../Img/background6.jpg");
   background-size: cover;
@@ -18,6 +29,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   /* This ensures that the background remains fixed when scrolling */
+  min-height: 100vh;
+  /* Set minimum height to 100% of the viewport height */
 }
 
 /* Show scrollbar when actively scrolling */
@@ -937,6 +950,10 @@ video {
   height: 20rem;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -1157,6 +1174,10 @@ video {
 .rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .border-2{
@@ -1476,10 +1497,6 @@ video {
 
 .delay-500{
   transition-delay: 500ms;
-}
-
-.delay-0{
-  transition-delay: 0s;
 }
 
 /* body {
@@ -2188,6 +2205,11 @@ video {
     line-height: 1;
   }
 
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2229,6 +2251,18 @@ video {
 
   .lg\:hidden{
     display: none;
+  }
+
+  .lg\:h-1\/5{
+    height: 20%;
+  }
+
+  .lg\:h-3\/5{
+    height: 60%;
+  }
+
+  .lg\:h-4\/5{
+    height: 80%;
   }
 
   .lg\:h-80{
@@ -2302,8 +2336,8 @@ video {
     text-align: end;
   }
 
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }

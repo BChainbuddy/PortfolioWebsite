@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
 body {
   background-image: url("../Img/background6.jpg");
   background-size: cover;
@@ -13,6 +24,7 @@ body {
   backdrop-filter: blur(3px);
   background-position: center;
   background-attachment: fixed; /* This ensures that the background remains fixed when scrolling */
+  min-height: 100vh; /* Set minimum height to 100% of the viewport height */
 }
 
 /* Show scrollbar when actively scrolling */
