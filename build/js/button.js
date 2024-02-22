@@ -372,6 +372,13 @@ filterHardat.addEventListener("click", () => {
           for (let c = 0; c < projects.length; c++) {
             if (projects[c].classList.contains("hidden")) {
               projects[c].classList.remove("hidden");
+              //Animation
+              // if (!projects[c].classList.contains("project-end")) {
+              //   projects[c].classList.toggle(
+              //     "project-end",
+              //     item.isIntersecting
+              //   );
+              // }
             }
           }
         } else {
@@ -442,3 +449,13 @@ filterReact.addEventListener("click", () => {
     }
   }
 });
+
+// .project-start {
+//   transform: translateY(100px);
+//   opacity: 0;
+//   transition-duration: 1000ms;
+// }
+
+// .project-end {
+//   transform: translateY(0px);
+//   opacity: 1;

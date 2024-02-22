@@ -56,8 +56,6 @@ reset.addEventListener("click", () => {
 const recentlyAddedTitle = document.getElementById("recentlyAdded");
 const allProjectsTitle = document.getElementById("allProjects");
 
-reset.addEventListener("click", () => {});
-
 opened.addEventListener("click", () => {
   recentlyAddedTitle.classList.toggle("titleRecentlyAdded-end");
 });
