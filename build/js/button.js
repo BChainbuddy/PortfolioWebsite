@@ -103,6 +103,77 @@ filterButton.addEventListener("click", () => {
 // ce kliknemo gor in ima neka druga bg, potem tam odstranimo bg, pri nasi dodamo, hiddamo vse elemente ki niso hiddani in odhiddamo vse elemente filtra
 // ce kliknemo gor in ima nasa bg, odstranimo bg in odhidamo vse ki so hiddani
 
+const removeButton = () => {
+  btn2div.classList.remove("view-end");
+};
+
+const addDelay = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (i > 2) {
+      if (i % 3 === 1) {
+        array[i].classList.toggle("delay-150");
+      } else if (i % 3 === 2) {
+        array[i].classList.toggle("delay-300");
+      }
+    }
+  }
+};
+
+const clearDelay = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].classList.contains("delay-150")) {
+      array[i].classList.remove("delay-150");
+    } else if (array[i].classList.contains("delay-300")) {
+      array[i].classList.remove("delay-300");
+    }
+  }
+};
+
+const removeAnimation = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    array[i].classList.add("hidden");
+  }
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].classList.contains("project-start")) {
+      array[i].classList.remove("project-start");
+    }
+    if (array[i].classList.contains("project-end")) {
+      array[i].classList.remove("project-end");
+    }
+  }
+};
+
+const restartItems = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (!array[i].classList.contains("project-start")) {
+      array[i].classList.add("project-start");
+    }
+    if (array[i].classList.contains("project-end")) {
+      array[i].classList.remove("project-end");
+    }
+  }
+};
+
+const addAnimation = (array) => {
+  let itemCounter = 0;
+  const animation = () => {
+    for (let i = 0; i < array.length; i++) {
+      array[i].classList.remove("hidden");
+      if (itemCounter < 3) {
+        array[i].classList.add("project-start");
+        setTimeout(() => {
+          array[i].classList.add("project-end");
+        }, 1000);
+        itemCounter++;
+      } else {
+        array[i].classList.add("project-start");
+      }
+    }
+    btn2div.classList.add("view-end");
+  };
+  setTimeout(animation, 50);
+};
+
 filterJavascript.addEventListener("click", () => {
   let a = false; // false - no other filter is on, true - other filter is on
   console.log("getting javascript projects");
@@ -140,10 +211,21 @@ filterJavascript.addEventListener("click", () => {
           console.log("Button was on");
           filterIcons[i].classList.remove("bg-white");
           for (let c = 0; c < projects.length; c++) {
-            if (projects[c].classList.contains("hidden")) {
-              projects[c].classList.remove("hidden");
+            if (!projects[c].classList.contains("hidden")) {
+              projects[c].classList.add("hidden");
             }
           }
+          setTimeout(() => {
+            clearDelay(projects);
+            restartItems(projects);
+            addDelay(projects);
+            for (let c = 0; c < projects.length; c++) {
+              if (projects[c].classList.contains("hidden")) {
+                projects[c].classList.remove("hidden");
+              }
+            }
+          }, 50);
+          return;
         } else {
           console.log("Button was off");
           filterIcons[i].classList.add("bg-white");
@@ -156,6 +238,17 @@ filterJavascript.addEventListener("click", () => {
       }
     }
   }
+  removeButton();
+  clearDelay(projects);
+  let newArray = [];
+  for (let i = 0; i < projects.length; i++) {
+    if (projects[i].classList.contains("javascript")) {
+      newArray.push(projects[i]);
+    }
+  }
+  addDelay(newArray);
+  removeAnimation(newArray);
+  addAnimation(newArray);
 });
 
 filterPython.addEventListener("click", () => {
@@ -195,10 +288,21 @@ filterPython.addEventListener("click", () => {
           console.log("Button was on");
           filterIcons[i].classList.remove("bg-white");
           for (let c = 0; c < projects.length; c++) {
-            if (projects[c].classList.contains("hidden")) {
-              projects[c].classList.remove("hidden");
+            if (!projects[c].classList.contains("hidden")) {
+              projects[c].classList.add("hidden");
             }
           }
+          setTimeout(() => {
+            clearDelay(projects);
+            restartItems(projects);
+            addDelay(projects);
+            for (let c = 0; c < projects.length; c++) {
+              if (projects[c].classList.contains("hidden")) {
+                projects[c].classList.remove("hidden");
+              }
+            }
+          }, 50);
+          return;
         } else {
           console.log("Button was off");
           filterIcons[i].classList.add("bg-white");
@@ -211,6 +315,17 @@ filterPython.addEventListener("click", () => {
       }
     }
   }
+  removeButton();
+  clearDelay(projects);
+  let newArray = [];
+  for (let i = 0; i < projects.length; i++) {
+    if (projects[i].classList.contains("python")) {
+      newArray.push(projects[i]);
+    }
+  }
+  addDelay(newArray);
+  removeAnimation(newArray);
+  addAnimation(newArray);
 });
 
 filterSolidity.addEventListener("click", () => {
@@ -255,10 +370,21 @@ filterSolidity.addEventListener("click", () => {
           console.log("Button was on");
           filterIcons[i].classList.remove("bg-white");
           for (let c = 0; c < projects.length; c++) {
-            if (projects[c].classList.contains("hidden")) {
-              projects[c].classList.remove("hidden");
+            if (!projects[c].classList.contains("hidden")) {
+              projects[c].classList.add("hidden");
             }
           }
+          setTimeout(() => {
+            clearDelay(projects);
+            restartItems(projects);
+            addDelay(projects);
+            for (let c = 0; c < projects.length; c++) {
+              if (projects[c].classList.contains("hidden")) {
+                projects[c].classList.remove("hidden");
+              }
+            }
+          }, 50);
+          return;
         } else {
           console.log("Button was off");
           filterIcons[i].classList.add("bg-white");
@@ -271,6 +397,17 @@ filterSolidity.addEventListener("click", () => {
       }
     }
   }
+  removeButton();
+  clearDelay(projects);
+  let newArray = [];
+  for (let i = 0; i < projects.length; i++) {
+    if (projects[i].classList.contains("solidity")) {
+      newArray.push(projects[i]);
+    }
+  }
+  addDelay(newArray);
+  removeAnimation(newArray);
+  addAnimation(newArray);
 });
 
 filterNextjs.addEventListener("click", () => {
@@ -315,10 +452,21 @@ filterNextjs.addEventListener("click", () => {
           console.log("Button was on");
           filterIcons[i].classList.remove("bg-white");
           for (let c = 0; c < projects.length; c++) {
-            if (projects[c].classList.contains("hidden")) {
-              projects[c].classList.remove("hidden");
+            if (!projects[c].classList.contains("hidden")) {
+              projects[c].classList.add("hidden");
             }
           }
+          setTimeout(() => {
+            clearDelay(projects);
+            restartItems(projects);
+            addDelay(projects);
+            for (let c = 0; c < projects.length; c++) {
+              if (projects[c].classList.contains("hidden")) {
+                projects[c].classList.remove("hidden");
+              }
+            }
+          }, 50);
+          return;
         } else {
           console.log("Button was off");
           filterIcons[i].classList.add("bg-white");
@@ -331,6 +479,17 @@ filterNextjs.addEventListener("click", () => {
       }
     }
   }
+  removeButton();
+  clearDelay(projects);
+  let newArray = [];
+  for (let i = 0; i < projects.length; i++) {
+    if (projects[i].classList.contains("nextjs")) {
+      newArray.push(projects[i]);
+    }
+  }
+  addDelay(newArray);
+  removeAnimation(newArray);
+  addAnimation(newArray);
 });
 
 filterHardat.addEventListener("click", () => {
@@ -370,17 +529,21 @@ filterHardat.addEventListener("click", () => {
           console.log("Button was on");
           filterIcons[i].classList.remove("bg-white");
           for (let c = 0; c < projects.length; c++) {
-            if (projects[c].classList.contains("hidden")) {
-              projects[c].classList.remove("hidden");
-              //Animation
-              // if (!projects[c].classList.contains("project-end")) {
-              //   projects[c].classList.toggle(
-              //     "project-end",
-              //     item.isIntersecting
-              //   );
-              // }
+            if (!projects[c].classList.contains("hidden")) {
+              projects[c].classList.add("hidden");
             }
           }
+          setTimeout(() => {
+            clearDelay(projects);
+            restartItems(projects);
+            addDelay(projects);
+            for (let c = 0; c < projects.length; c++) {
+              if (projects[c].classList.contains("hidden")) {
+                projects[c].classList.remove("hidden");
+              }
+            }
+          }, 50);
+          return;
         } else {
           console.log("Button was off");
           filterIcons[i].classList.add("bg-white");
@@ -393,6 +556,17 @@ filterHardat.addEventListener("click", () => {
       }
     }
   }
+  removeButton();
+  clearDelay(projects);
+  let newArray = [];
+  for (let i = 0; i < projects.length; i++) {
+    if (projects[i].classList.contains("hardhat")) {
+      newArray.push(projects[i]);
+    }
+  }
+  addDelay(newArray);
+  removeAnimation(newArray);
+  addAnimation(newArray);
 });
 
 filterReact.addEventListener("click", () => {
@@ -432,10 +606,21 @@ filterReact.addEventListener("click", () => {
           console.log("Button was on");
           filterIcons[i].classList.remove("bg-white");
           for (let c = 0; c < projects.length; c++) {
-            if (projects[c].classList.contains("hidden")) {
-              projects[c].classList.remove("hidden");
+            if (!projects[c].classList.contains("hidden")) {
+              projects[c].classList.add("hidden");
             }
           }
+          setTimeout(() => {
+            clearDelay(projects);
+            restartItems(projects);
+            addDelay(projects);
+            for (let c = 0; c < projects.length; c++) {
+              if (projects[c].classList.contains("hidden")) {
+                projects[c].classList.remove("hidden");
+              }
+            }
+          }, 50);
+          return;
         } else {
           console.log("Button was off");
           filterIcons[i].classList.add("bg-white");
@@ -448,14 +633,15 @@ filterReact.addEventListener("click", () => {
       }
     }
   }
+  removeButton();
+  clearDelay(projects);
+  let newArray = [];
+  for (let i = 0; i < projects.length; i++) {
+    if (projects[i].classList.contains("react")) {
+      newArray.push(projects[i]);
+    }
+  }
+  addDelay(newArray);
+  removeAnimation(newArray);
+  addAnimation(newArray);
 });
-
-// .project-start {
-//   transform: translateY(100px);
-//   opacity: 0;
-//   transition-duration: 1000ms;
-// }
-
-// .project-end {
-//   transform: translateY(0px);
-//   opacity: 1;

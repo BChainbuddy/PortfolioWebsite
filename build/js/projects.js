@@ -34,6 +34,18 @@ const projectObserver = new IntersectionObserver(
   }
 );
 
+for (let i = 0; i < projectsForObserving.length; i++) {
+  if (i > 2) {
+    if (i % 3 === 1) {
+      projectsForObserving[i].classList.toggle("delay-150");
+      console.log("ITEM IS FOURTH");
+    } else if (i % 3 === 2) {
+      console.log("ITEM IS FIFTH");
+      projectsForObserving[i].classList.toggle("delay-300");
+    }
+  }
+}
+
 if (projectsForObserving) {
   projectsForObserving.forEach((item) => projectObserver.observe(item));
 }

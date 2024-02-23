@@ -373,24 +373,6 @@ body::-webkit-scrollbar {
   transform: translateX(0px) translateY(0px);
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .recentlyAdded-start {
   transform: translateY(100px);
   opacity: 0;
@@ -431,4 +413,8 @@ body::-webkit-scrollbar {
 .homepage-end {
   transform: translateY(0px);
   opacity: 1;
+}
+
+#grid {
+  min-height: 700px;
 }
