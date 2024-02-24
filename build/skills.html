@@ -8,7 +8,7 @@
         <link rel="icon" href="Img/contactmeimg4.png">
     </head>
     <body class="">
-        <div id="header" class="z-10 lg:mt-16 flex flex-row justify-between sm:items-center sm:pb-4 pt-4 lg:pb-0 border-bottom-LightBlue md:border-b-0 sm:bg-teal-950 md:bg-transparent">
+        <div id="header" class="z-20 flex flex-row justify-between sm:items-center sm:pb-4 pt-4 lg:pb-0 border-bottom-LightBlue md:border-b-0 sm:bg-teal-950 md:bg-transparent">
             <div class="flex lg:ml-20 md:ml-8 sm:ml-2 items-center p-0">
                 <img src="Img/jakapLogoTransparent.png" class="md:h-12 md:w-12 sm:h-16 sm:w-16">
                 <p class="sm:self-center cursor-default text-3xl font-thin font-mono text-transparent bg-clip-text custom-gradient-left">JAKA</p>        
@@ -28,16 +28,15 @@
                 <span class="hamburger-bottom bg-LightBlue"></span>
             </button>
         </div>
-        <div class="lg:hidden">
-            <div id="menu" class="flex-col items-center backdrop-blur-xl hidden self-end left-6 right-6 py-8 space-y-6 font-bold text-DarkBlue bg-LightBlue sm:w-auto sm:self-center drop-shadow-md">
-                <a href="index.html" class="hover:text-white text-lg">Home</a>
+        <div class="lg:hidden sticky top-24 z-10">
+            <div id="menu" class="border-LightBlue border-x-2 border-b-2 flex-col items-center backdrop-blur-xl hidden self-end mx-8 py-8 space-y-6 font-bold text-DarkBlue bg-teal-500 sm:w-auto sm:self-center drop-shadow-md rounded-b-lg">                <a href="index.html" class="hover:text-white text-lg">Home</a>
                 <a href="mywork.html" class="hover:text-white text-lg">My work</a>
                 <a href="skills.html" class="text-white text-lg font-bold">Skills</a>
                 <a href="aboutme.html" class="hover:text-white text-lg">About me</a>
                 <a href="contact.html" class="hover:text-white text-lg">Contact</a>
             </div>
         </div>
-        <div class="flex flex-col lg:space-y-12 sm:space-y-24 sm:pb-20 p-8">
+        <div class="flex flex-col lg:space-y-12 sm:space-y-16 sm:pb-20 p-8">
             <div class="lg:p-8 lg:mt-10 sm:mt-14">
                 <h1 class="md:text-4xl sm:text-3xl text-center text-LightBlue font-mono">TECHNOLOGIES</h1>
             </div>
@@ -124,52 +123,56 @@
             <div class="sm:flex lg:hidden justify-center px-4">
                 <div class="grid grid-cols-3 place-items-center gap-10">
                     <div class="relative group">
-                        <img src="Img/react3.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/react3.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>REACT</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/Tailwindcss.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/Tailwindcss.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>TAILWINDCSS</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/nextjs.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/nextjs.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>NEXTJS</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/html5.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/html5.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>HTML</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/javascript.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/cssLogo.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl"> 
+                        <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>CSS</p></div>
+                    </div>
+                    <div class="relative group">
+                        <img src="Img/javascript.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>JAVASCRIPT</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/solidity.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/solidity.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>SOLIDITY</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/python.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/python.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>PYTHON</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/hardhat.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/hardhat.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>HARDHAT</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/ethers.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/ethers.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>ETHERS.JS</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/postgresql.jpg" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/postgresql.jpg" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>POSTGRESQL</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/graphql.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
+                        <img src="Img/graphql.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
                         <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>GRAPHQL</p></div>
                     </div>
                     <div class="relative group">
-                        <img src="Img/Redux.png" class="h-24 w-24 shadow-lg shadow-cyan-500/50 rounded-xl min-w-40">
-                        <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>GRAPHQL</p></div>
+                        <img src="Img/Redux.png" class="h-20 w-20 shadow-lg shadow-cyan-500/50 rounded-xl">
+                        <div class="cursor-default flex opacity-0 hover:opacity-100 absolute inset-0 justify-center text-center items-center hover:backdrop-blur-xl rounded-xl text-DarkBlue font-mono font-bold"><p>REDUX</p></div>
                     </div>
                 </div>
             </div>

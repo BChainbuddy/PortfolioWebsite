@@ -146,11 +146,13 @@ const removeAnimation = (array) => {
 const restartItems = (array) => {
   for (let i = 0; i < array.length; i++) {
     if (!array[i].classList.contains("project-start")) {
+      console.log("Doesnt containt!");
       array[i].classList.add("project-start");
     }
     if (array[i].classList.contains("project-end")) {
       array[i].classList.remove("project-end");
     }
+    console.log(`${array[i].id} has ${array[i].classList}`);
   }
 };
 
@@ -224,7 +226,7 @@ filterJavascript.addEventListener("click", () => {
                 projects[c].classList.remove("hidden");
               }
             }
-          }, 50);
+          }, 20);
           return;
         } else {
           console.log("Button was off");
@@ -301,7 +303,8 @@ filterPython.addEventListener("click", () => {
                 projects[c].classList.remove("hidden");
               }
             }
-          }, 50);
+          }, 20);
+          console.log("IT SHOULD STOP HERE!");
           return;
         } else {
           console.log("Button was off");
@@ -315,6 +318,7 @@ filterPython.addEventListener("click", () => {
       }
     }
   }
+  console.log("THIS SHOULDNT HAPPEN");
   removeButton();
   clearDelay(projects);
   let newArray = [];
@@ -383,7 +387,7 @@ filterSolidity.addEventListener("click", () => {
                 projects[c].classList.remove("hidden");
               }
             }
-          }, 50);
+          }, 20);
           return;
         } else {
           console.log("Button was off");
@@ -465,7 +469,7 @@ filterNextjs.addEventListener("click", () => {
                 projects[c].classList.remove("hidden");
               }
             }
-          }, 50);
+          }, 20);
           return;
         } else {
           console.log("Button was off");
@@ -542,7 +546,7 @@ filterHardat.addEventListener("click", () => {
                 projects[c].classList.remove("hidden");
               }
             }
-          }, 50);
+          }, 20);
           return;
         } else {
           console.log("Button was off");
@@ -619,7 +623,7 @@ filterReact.addEventListener("click", () => {
                 projects[c].classList.remove("hidden");
               }
             }
-          }, 50);
+          }, 20);
           return;
         } else {
           console.log("Button was off");

@@ -34,14 +34,22 @@ const projectObserver = new IntersectionObserver(
   }
 );
 
-for (let i = 0; i < projectsForObserving.length; i++) {
-  if (i > 2) {
-    if (i % 3 === 1) {
-      projectsForObserving[i].classList.toggle("delay-150");
-      console.log("ITEM IS FOURTH");
-    } else if (i % 3 === 2) {
-      console.log("ITEM IS FIFTH");
-      projectsForObserving[i].classList.toggle("delay-300");
+function addDelays() {
+  for (let i = 0; i < projectsForObserving.length; i++) {
+    if (projectsForObserving[i].classList.contains("delay-150")) {
+      projectsForObserving[i].classList.remove("delay-150");
+    }
+    if (projectsForObserving[i].classList.contains("delay-300")) {
+      projectsForObserving[i].classList.remove("delay-300");
+    }
+    if (i > 2) {
+      if (i % 3 === 1) {
+        projectsForObserving[i].classList.toggle("delay-150");
+        console.log("ITEM IS FOURTH");
+      } else if (i % 3 === 2) {
+        console.log("ITEM IS FIFTH");
+        projectsForObserving[i].classList.toggle("delay-300");
+      }
     }
   }
 }
@@ -70,6 +78,7 @@ const allProjectsTitle = document.getElementById("allProjects");
 
 opened.addEventListener("click", () => {
   recentlyAddedTitle.classList.toggle("titleRecentlyAdded-end");
+  addDelays();
 });
 
 const smprojects = document.querySelectorAll(".smproject");
