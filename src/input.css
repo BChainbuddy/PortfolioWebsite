@@ -356,13 +356,13 @@ body::-webkit-scrollbar {
 }
 
 .start-resource-even {
-  transform: translateX(100px) translateY(60px);
+  transform: translateX(40px) translateY(30px);
   transition: 1000ms;
   opacity: 0;
 }
 
 .start-resource-odd {
-  transform: translateX(-100px) translateY(60px);
+  transform: translateX(-40px) translateY(30px);
   transition: 1000ms;
   opacity: 0;
 }

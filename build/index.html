@@ -7,10 +7,10 @@
     <title>Jaka's Portfolio</title>
     <link rel="icon" href="Img/contactmeimg4.png">
 </head>
-<body class="h-screen">
+<body class="h-screen flex flex-col">
     <div id="header" class="z-20 lg:h-1/5 flex flex-row justify-between sm:items-center sm:pb-4 pt-4 lg:pb-0 border-bottom-LightBlue md:border-b-0 sm:bg-teal-950 md:bg-transparent">
         <div class="flex lg:ml-20 md:ml-8 sm:ml-2 items-center p-0">
-            <img src="Img/jakapLogoTransparent.png" class="md:h-12 md:w-12 sm:h-16 sm:w-16">
+            <img src="Img/jakapLogoTransparent.png" class="md:h-12 md:w-12 sm:h-10 sm:w-10">
             <p class="sm:self-center cursor-default text-3xl font-thin font-mono text-transparent bg-clip-text custom-gradient-left">JAKA</p>        
         </div>
         <div class="lg:flex justify-end md:hidden sm:hidden">
@@ -28,15 +28,16 @@
                 <span class="hamburger-bottom bg-LightBlue"></span>
             </button>
     </div>
-    <div id="menu" class="lg:hidden fixed top-24 z-10 left-8 right-8 overflow-hidden menuClose">
-        <div class="border-LightBlue border-x-2 border-b-2 flex-col flex items-center py-8 space-y-6 font-bold text-DarkBlue bg-teal-500 sm:self-center drop-shadow-md rounded-b-lg">                <a href="index.html" class="text-white text-lg font-bold">Home</a>
+    <div id="menu" class="lg:hidden fixed z-10 left-8 right-8 overflow-hidden menuClose top-16">
+        <div class="border-LightBlue border-x-2 border-b-2 flex-col flex items-center py-8 space-y-6 font-bold text-DarkBlue bg-teal-500 sm:self-center drop-shadow-md rounded-b-lg">                
+                <a href="index.html" class="text-white text-lg font-bold">Home</a>
                 <a href="mywork.html" class="hover:text-white text-lg">My work</a>
                 <a href="skills.html" class="hover:text-white text-lg">Skills</a>
                 <a href="aboutme.html" class="hover:text-white text-lg">About me</a>
                 <a href="contact.html" class="hover:text-white text-lg">Contact</a>
-            </div>
+        </div>
     </div>
-    <div class="lg:h-3/5 flex flex-row lg:px-16 lg:py-32 md:py-40 sm:py-24 justify-center">
+    <div class="flex-1 lg:h-3/5 flex flex-row lg:px-16 lg:py-32 md:py-40 sm:py-20 justify-center sm:items-center">
             <div class="flex flex-col mt-10 sm:w-11/12 md:w-auto lg:min-w-max">
                     <div class="md:space-y-2 sm:space-y-5">
                         <div id="name" class="homepage-start sm:items-end md:items-center space-x-1 md:text-start sm:text-center md:justify-normal sm:justify-center">
@@ -59,8 +60,8 @@
                 <img src="Img/man-technologist-light-skin-tone-svgrepo-com.svg" class="lg:h-80 lg:w-80 md:h-60 md:w-60 drop-shadow-2xl">
             </div>
     </div>
-    <div class="flex justify-center items-center lg:h-1/5 sm:mt-12 md:mt-0">
-        <p id="quote" class="mt-16 homepage-start delay-500 cursor-default sm:text-base md:text-lg lg:text-xl text-center font-thin font-mono text-transparent bg-clip-text custom-gradient-right">"DON'T BE AFRAID TO FAIL, IT IS THE ONLY WAY TO SUCCEED"</p>
+    <div class="pt-6 pb-10 flex justify-center items-center lg:h-1/5">
+        <p id="quote" class="homepage-start delay-500 cursor-default sm:text-base md:text-lg lg:text-xl text-center font-thin font-mono text-transparent bg-clip-text custom-gradient-right">"DON'T BE AFRAID TO FAIL, IT IS THE ONLY WAY TO SUCCEED"</p>
     </div>
     <script src="js/button.js"></script>
     <script src="js/animationHomePage.js"></script>
