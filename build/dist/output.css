@@ -18,14 +18,12 @@
 } */
 
 body {
-  background-image: url("../Img/background6.jpg");
+  background-image: url("../Img/backgroundBlurred.png");
   background-size: cover;
   margin: 0;
   /* Remove any default margins */
   padding: 0;
   background-repeat: no-repeat;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
   background-position: center;
   background-attachment: fixed;
   /* This ensures that the background remains fixed when scrolling */
@@ -767,6 +765,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -791,12 +793,20 @@ video {
   left: 0px;
 }
 
+.left-8{
+  left: 2rem;
+}
+
 .right-0{
   right: 0px;
 }
 
 .right-0\.5{
   right: 0.125rem;
+}
+
+.right-8{
+  right: 2rem;
 }
 
 .top-0{
@@ -809,6 +819,10 @@ video {
 
 .top-24{
   top: 6rem;
+}
+
+.top-80{
+  top: 20rem;
 }
 
 .-z-10{
@@ -825,11 +839,6 @@ video {
 
 .m-3{
   margin: 0.75rem;
-}
-
-.mx-8{
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .mx-auto{
@@ -1031,6 +1040,10 @@ video {
   place-items: center;
 }
 
+.content-center{
+  align-content: center;
+}
+
 .items-center{
   align-items: center;
 }
@@ -1143,8 +1156,16 @@ video {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
-.self-end{
-  align-self: flex-end;
+.self-center{
+  align-self: center;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 
 .break-all{
@@ -1237,6 +1258,11 @@ video {
 .bg-clip-text{
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.object-center{
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-0{
@@ -1492,12 +1518,6 @@ video {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-.backdrop-blur-xl{
-  --tw-backdrop-blur: blur(24px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
 .delay-150{
   transition-delay: 150ms;
 }
@@ -1721,6 +1741,15 @@ video {
   min-height: 700px;
 }
 
+.menuClose {
+  transition: all 900ms 50ms ease;
+  max-height: 0;
+}
+
+.menuOpen {
+  max-height: 500px;
+}
+
 .file\:cursor-default::file-selector-button{
   cursor: default;
 }
@@ -1878,10 +1907,6 @@ video {
     width: 18rem;
   }
 
-  .sm\:w-auto{
-    width: auto;
-  }
-
   .sm\:flex-row{
     flex-direction: row;
   }
@@ -1947,6 +1972,16 @@ video {
   .sm\:py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .sm\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .sm\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .sm\:pb-20{

@@ -3,8 +3,7 @@ const nav = document.getElementById("menu");
 
 btn.addEventListener("click", () => {
   btn.classList.toggle("open");
-  nav.classList.toggle("flex");
-  nav.classList.toggle("hidden");
+  nav.classList.toggle("menuOpen");
 });
 
 const btn2 = document.getElementById("view-button");

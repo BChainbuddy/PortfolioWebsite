@@ -16,12 +16,11 @@
 } */
 
 body {
-  background-image: url("../Img/background6.jpg");
+  background-image: url("../Img/backgroundBlurred.png");
   background-size: cover;
   margin: 0; /* Remove any default margins */
   padding: 0;
   background-repeat: no-repeat;
-  backdrop-filter: blur(3px);
   background-position: center;
   background-attachment: fixed; /* This ensures that the background remains fixed when scrolling */
   min-height: 100vh; /* Set minimum height to 100% of the viewport height */
@@ -417,4 +416,13 @@ body::-webkit-scrollbar {
 
 #grid {
   min-height: 700px;
+}
+
+.menuClose {
+  transition: all 900ms 50ms ease;
+  max-height: 0;
+}
+
+.menuOpen {
+  max-height: 500px;
 }
