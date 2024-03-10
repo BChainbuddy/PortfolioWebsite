@@ -426,3 +426,14 @@ body::-webkit-scrollbar {
 .menuOpen {
   max-height: 500px;
 }
+
+.contact {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition-duration: 1000ms;
+}
+
+.contact-end {
+  transform: translateY(0px);
+  opacity: 1;
+}
