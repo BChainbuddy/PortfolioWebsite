@@ -7,6 +7,8 @@
 * {
   margin: 0;
   padding: 0;
+  scrollbar-color: lightblue transparent; /* Thumb and track color */
+  scrollbar-width: thin; /* Similar to 6px in WebKit browsers */
 }
 
 /* *,
