@@ -1513,10 +1513,6 @@ video {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-.delay-100{
-  transition-delay: 100ms;
-}
-
 .delay-150{
   transition-delay: 150ms;
 }
@@ -1527,10 +1523,6 @@ video {
 
 .delay-500{
   transition-delay: 500ms;
-}
-
-.delay-200{
-  transition-delay: 200ms;
 }
 
 .delay-700{

@@ -130,24 +130,33 @@
                     </p>
                 </div>
             </div>
-            <div id="liquiditypool" class="delay-300 recentlyAdded recentlyAdded-start flex flex-col sm:w-72 md:w-80 space-y-4">
-                <div class="sm:justify-center md:justify-center text-xs text-white flex sm:flex-row">
+            <div id="weaveswap" class="delay-300 recentlyAdded recentlyAdded-start flex flex-col sm:w-72 md:w-80 space-y-4">
+                <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
                     <p class="sm:hidden md:flex"> 
                         Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
                     </p>
-                    <a href="https://github.com/BChainbuddy/LiquidityPool" class="sm:flex md:hidden flex-row space-x-0.5">
-                        <p>Click here for backend</p>
+                    <a href="https://github.com/WeaveSwap/smart-contracts" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for source code</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                    <a href="https://weaveonbnb.vercel.app/" class="sm:flex md:hidden flex flex-row space-x-0.5">
+                        <p>Click here to see the demo</p>
                         <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
                     </a>
                 </div>
                 <div class="relative group">
                     <div>
                         <div>
-                            <img src="Img/hardhatplaceholder.jpeg" class="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <img src="Img/WeaveSwap.png" class="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
                             <div class="md:flex sm:hidden">
-                                <a href="https://github.com/BChainbuddy/LiquidityPool">
-                                    <div class="opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
-                                        <p>Click to see the source code for BACKEND...</p>
+                                <a href="https://github.com/WeaveSwap/smart-contracts">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for FRONTEND...</p>
+                                    </div>
+                                </a>
+                                <a href="https://weaveonbnb.vercel.app/" target="_blank">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center" target="_blank">
+                                        <p>Click to see the demo...</p>
                                     </div>
                                 </a>
                             </div>
@@ -156,14 +165,52 @@
                 </div>
                 <div class="backdrop-blur-lg border-LightBlue rounded-xl">
                     <p class="text-justify text-white  m-3">
-                        My very own Liquidity Pool. It is made with hardhadat using solidity and javascript. It has lots of functionalities such as exchange of tokens, liquidity providing,
-                        yield farming, and much more...
+                        This is WeaveSwap, a platform that consists of a Dex and a Lending protocol. It was made for BNB hackaton on dorahacks. My part was to architect and deploy all the smart contracts.
                     </p>
                 </div>
             </div>
         </div>
         <!-- SM AND MD WORK (NEED TO REDO) -->
         <div class="sm:flex lg:hidden sm:mt-20 md:mt-0 sm:flex-col sm:pb-20 md:pb-10 md:px-16 md:pt-16 md:py-10 sm:space-y-20 md:space-y-20 sm:items-center md:items-center"> 
+            <div id="weaveswap" class="start-resource-odd smproject flex flex-col sm:w-72 md:w-96 lg:w-3/12 space-y-4">
+                <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/WeaveSwap/smart-contracts" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for code</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                    <a href="https://weaveonbnb.vercel.app/" class="sm:flex md:hidden flex flex-row space-x-0.5" target="_blank">
+                        <p>Click here for demo</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/WeaveSwap.png" class="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/WeaveSwap/smart-contracts">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for FRONTEND...</p>
+                                    </div>
+                                </a>
+                                <a href="https://weaveonbnb.vercel.app/" target="_blank">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center" target="_blank">
+                                        <p>Click to see the demo...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white  m-3">
+                        This is WeaveSwap, a platform that consists of a Dex and a Lending protocol. It was made for BNB hackaton on dorahacks. My part was to architect and deploy all the smart contracts.
+                    </p>
+                </div>
+            </div>
             <div id="bridge" class="start-resource-even smproject flex flex-col sm:w-72 md:w-96 lg:w-3/12 space-y-4">
                 <div class="sm:justify-center md:justify-center text-xs text-white flex sm:flex-row">
                     <p class="sm:hidden md:flex"> 
@@ -255,7 +302,7 @@
                     </p>
                 </div>
             </div>
-            <div id="redditclient" class="start-resource-odd smproject flex flex-col sm:w-72 md:w-80 space-y-4">
+            <div id="redditclient" class="start-resource-odd smproject flex flex-col sm:w-72 md:w-96 lg:w-3/12 space-y-4">
                 <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
                     <p class="sm:hidden md:flex"> 
                         Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
@@ -623,8 +670,48 @@
                         This is a decentralized exchange where the user gets the ability to exchange different ethereum tokens based on Uniswap Liquidity pools. This project is made with nextjs. 
                     </p>
                 </div>
+            
             </div>
-            <div id="liquiditypool" class="project solidity javascript hardhat flex flex-col w-80 space-y-4">
+            <div id="weaveswap" class="project javascript solidity hardhat flex flex-col w-80 space-y-4">
+                <div class="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
+                    <p class="sm:hidden md:flex"> 
+                        Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
+                    </p>
+                    <a href="https://github.com/WeaveSwap/smart-contracts" class="sm:flex md:hidden flex-row space-x-0.5">
+                        <p>Click here for source code</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                    <a href="https://weaveonbnb.vercel.app/" class="sm:flex md:hidden flex flex-row space-x-0.5">
+                        <p>Click here to see the demo</p>
+                        <img src="Img/linkclick.png" class="invert h-3 w-3 mt-0.5">
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div>
+                        <div>
+                            <img src="Img/WeaveSwap.png" class="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none">
+                            <div class="md:flex sm:hidden">
+                                <a href="https://github.com/WeaveSwap/smart-contracts">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center">
+                                        <p>Click to see the source code for FRONTEND...</p>
+                                    </div>
+                                </a>
+                                <a href="https://weaveonbnb.vercel.app/" target="_blank">
+                                    <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center" target="_blank">
+                                        <p>Click to see the demo...</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop-blur-lg border-LightBlue rounded-xl">
+                    <p class="text-justify text-white  m-3">
+                        This is WeaveSwap, a platform that consists of a Dex and a Lending protocol. It was made for BNB hackaton on dorahacks. My part was to architect and deploy all the smart contracts.
+                    </p>
+                </div>
+            </div>
+            <div id="liquiditypool" class="project-start project solidity javascript hardhat flex flex-col w-80 space-y-4">
                 <div class="sm:justify-center md:justify-center text-xs text-white flex sm:flex-row">
                     <p class="sm:hidden md:flex"> 
                         Hover on picture to choose a code file <p class="text-sm sm:hidden md:flex">👇</p>
@@ -679,7 +766,7 @@
                                         <p>Click to see the source code for FRONTEND...</p>
                                     </div>
                                 </a>
-                                <a href="https://customredditclient.netlify.app">
+                                <a href="https://customredditclient.netlify.app" target="_blank">
                                     <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center" target="_blank">
                                         <p>Click to see the demo...</p>
                                     </div>
@@ -718,7 +805,7 @@
                                         <p>Click to see the source code for FRONTEND...</p>
                                     </div>
                                 </a>
-                                <a href="https://incandescent-fenglisu-612360.netlify.app">
+                                <a href="https://incandescent-fenglisu-612360.netlify.app" target="_blank">
                                     <div class="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-DarkBlue font-bold flex items-center justify-center text-center" target="_blank">
                                         <p>Click to see the demo...</p>
                                     </div>
